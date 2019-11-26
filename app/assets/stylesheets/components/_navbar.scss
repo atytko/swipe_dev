@@ -1,12 +1,10 @@
-html, body {
+
+.navbar-background {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     max-width: 100%;
     overflow-x: hidden;
     background-image: none;
-}
-
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .bg-purple {
