@@ -1,0 +1,56 @@
+.profile-page{
+   background-color: #ffffff;
+   height: 100vh;
+
+}
+
+.profile-pic-name{
+  display:flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+
+}
+
+.profile-about{
+  margin-left: 30px;
+}
+
+.profile-experience{
+  margin-left: 30px;
+
+  .experience-font{
+    color: #464648;
+    margin-left:50px;
+  }
+}
+
+.profile-filter{
+  margin-left: 30px;
+}
+
+.profile-link{
+  margin-left: 30px;
+}
+
+
+
+.fontcolor {
+  color: #9c9c9c;
+}
+
+.headingcolor {
+  color: #dadada;
+}
+
+.bold-text-profile-name{
+  font-weight: bold;
+  margin-left:20px;
+  color: #464648;
+}
+
+.button-font-color{
+  color: #696a75;
+}
