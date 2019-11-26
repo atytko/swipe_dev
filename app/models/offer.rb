@@ -1,5 +1,7 @@
 class Offer < ApplicationRecord
   has_many :filters
+  has_many :swipes
+  belongs_to :recruiter_id
   belongs_to :recruiter, class_name: 'User', foreign_key: "user_id"
 
   validates :location, presence: true
