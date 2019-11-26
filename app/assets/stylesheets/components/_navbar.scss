@@ -56,16 +56,21 @@
 
 #wrapper.toggled #sidebar-wrapper {
     width: 13.89rem;
+    position: absolute;
+}
+
+#sidebar-wrapper {
+  height: 100%;
 }
 
 #page-content-wrapper {
     width: 100%;
-    position: absolute;
-    padding: 15px;
+    // position: absolute;
+    // padding: 15px;
 }
 
 #wrapper.toggled #page-content-wrapper {
-    position: absolute;
+    // position: absolute;
     margin-right: 0px;
 }
 
@@ -124,10 +129,12 @@
 
     #sidebar-wrapper {
         width: 0;
+        height: 100%;
     }
 
     #wrapper.toggled #sidebar-wrapper {
         width: 13.89rem;
+        position: absolute;
     }
 }
 
