@@ -35,10 +35,12 @@
   color: #FFFFFF;
 }
 
- .btn:focus{
-    outline:none;
+
+.btn:focus {
+    outline: 0;
     box-shadow: none;
-  }
+}
+
 
 .background-lines {
   background-image: asset-url('lines.png');
