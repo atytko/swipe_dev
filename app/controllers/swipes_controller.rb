@@ -4,7 +4,7 @@ class SwipesController < ApplicationController
   end
 
   def show
-    @Swipe = Swipe.find(params[:id])
+    @swipe = Swipe.find(params[:id])
   end
 
  def swipe_params
