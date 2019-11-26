@@ -25,9 +25,11 @@
             </div>
         </div>
 
+<% @offers.each do |offer|%>
+<p><%= offer.location %></p>
 
-    <div class="footer fixed-bottom">
-        <div class="footer-top d-flex justify-content-center">
-            <%= image_tag("footer.png", :class => "img-fluid", :alt => "footer") %>
-        </div>
-    </div>
+
+<% end %>
+
+
+
