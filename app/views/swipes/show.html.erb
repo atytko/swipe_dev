@@ -1,5 +1,6 @@
   <div class = "match_background">
   <div class ="navbar-background">
+    <div class="background-lines"></div>
 
 <nav class="navbar navbar-expand navbar-dark bg-purple">
     <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
@@ -36,23 +37,23 @@
   <div class="container">
     <div class="row">
       <div class="col-xs mx-auto d-block mt-3">
-        <h4 class="red-font"> match = <span class="result">true</span> </h4>
+        <h4 class="red-font"> <b> match = <span class="result">true</span> </b> </h4>
       </div>
     </div>
   </div>
 
 <!--Avatars-->
  <div class="row">
-    <div class="col-xs mx-auto d-block mt-5" class="avatar">
-      <img class = "avatar" src = "../images/girl1.jpg" ></img><img class = "avatar" src = "images/google_logo.jpg" ></img>
+    <div class="col-xs mx-auto d-block mt-5">
+      <%= image_tag("girl1.jpg", :class => "avatar", :alt => "avatar") %><%= image_tag("google_logo.png", :class => "avatar", :alt => "avatar") %>
     </div>
   </div>
 
   <!--button1-->
   <div class="row">
     <div class="col text-center">
-      <button class="rounded-button1">
-        Go to chat <i class="rounded-button1"></i>
+      <button class="go-to-chat">
+        Go to chat <i class="fa fa-comment"></i>
       </button>
     </div>
   </div>
@@ -60,8 +61,8 @@
   <!--button2-->
   <div class="row">
     <div class="col text-center">
-      <button class="rounded-button2">
-        Back to swipe <i class="back-to-swipe"></i>
+      <button class="back-to-swipe">
+        Back to swipe  <i class="fa fa-undo-alt"></i>
       </button>
     </div>
   </div>
