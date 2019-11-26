@@ -1,6 +1,6 @@
 class Offer < ApplicationRecord
   has_many :filters
-  belongs_to :recruiter_id
+  belongs_to :recruiter, class_name: 'User', foreign_key: "user_id"
 
   validates :location, presence: true
   validates :min_salary, presence: true
