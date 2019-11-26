@@ -1,48 +1,54 @@
+<!-- navbar -->
+
 <div class ="navbar-background">
 
-<nav class="navbar navbar-expand navbar-dark bg-purple">
-    <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
-        <span class="navbar-toggler-icon"></span>
-    </a>
-</nav>
-<div id="wrapper">
+  <nav class="navbar navbar-expand navbar-dark bg-purple navbar-space-between">
+      <div>
+        <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
+          <span class="navbar-toggler-icon"></span>
+        </a>
+      </div>
+      <div>
+        <a class="edit-filters-button" href="#">Edit filters</a>
+      </div>
+  </nav>
+  <div id="wrapper">
     <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand"><a href="#"> IT WORKS!!!! </a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Shortcuts</a></li>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand"><a href="#"> Home </a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Browse jobs</a></li>
+        <li><a href="#">All matches</a></li>
+        <li><a href="#">Chats</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
     </div>
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-
-                    </div>
-                </div>
-            </div>
+   <!--  <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <p>hello</p>
         </div>
-
+      </div>
+    </div> -->
+  </div>
 </div>
+
+<!-- profile page -->
 
 <div class=profile-page>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6">
+    <div class="col-12">
       <div clas = "profile">
       <div class="profile-pic-name">
-        <div> <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" /></div>
-        <div> <h1 class="bold-text-profile-name"><%= @user.first_name %></h1></div>
+        <div> <img class="avatar-large-profile" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" /></div>
+        <div> <h1 class="bold-text-profile-name"><%= @user.first_name.capitalize %></h1></div>
       </div>
       <div class="profile-about">
 
         <h6 class="headingcolor">ABOUT</h6>
-        <p class="fontcolor"> TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-        TextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+        <p class="fontcolor"> TextTextTextTextTextTextTextTextTTextT
+        TextTextTextTextTextTextTextTextTextTextTextTe
       TextTextTextTextTextTextTextTextTextTextTextText</p>
       </div>
 
@@ -55,19 +61,22 @@
       </div>
 
       <div class="profile-filter">
-        <p class="headingcolor"> SKILLS</p>
-
-        <button class="button-font-color rounded-button"> Ruby</button> <button> PHP</button> <button> JS</button>
+        <div class="profile-filters-edit">
+          <div class="headingcolor"> SKILLS</div> <div class="headingcolor"> edit</div>
+        </div>
+        <button class="button-font-color rounded-button"> Ruby</button>
+        <button class="button-font-color rounded-button"> PHP</button>
+        <button class="button-font-color rounded-button"> JS</button>
       </div>
 
       <div class="profile-filter">
-        <p>Languages:</p>
+        <p class="headingcolor">Languages:</p>
 
-        <button> german</button> <button> portuegese</button> <button> JS</button>
+
       </div>
 
       <div class="profile-link">
-        <a href="#" class="card-link">link</a>
+        <a href="#" class="card-link">Go to swipe</a>
       </div>
       </div>
     </div>
