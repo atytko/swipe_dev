@@ -15,22 +15,29 @@
   <div id="wrapper">
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <li class="sidebar-brand"><a href="#"> Home </a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Browse jobs</a></li>
-        <li><a href="#">All matches</a></li>
-        <li><a href="#">Chats</a></li>
-        <li><a href="#">Settings</a></li>
+        <li class="sidebar-brand"><%= link_to "Home", root_path %></li>
+
+        <li><%= link_to "Profile", user_path(@user) %></li>
+        <li><%= link_to "Browse jobs", offers_path %></li>
+        <li><%= link_to "All matches", swipes_path %></li>
+        <li><%= link_to "Chats", root_path %></li>
+        <li><%= link_to "Settings", root_path %></li>
       </ul>
     </div>
-   <!--  <div id="page-content-wrapper">
+    <div id="page-content-wrapper">
       <div class="container-fluid">
         <div class="row">
-          <p>hello</p>
+
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
+
+ <div class="navbar-background footer fixed-bottom">
+        <div class="footer-top d-flex justify-content-center">
+            <%= image_tag("footer.png", :class => "img-fluid", :alt => "footer") %>
+        </div>
+    </div>
 </div>
 
 <!-- profile page -->
@@ -76,7 +83,7 @@
       </div>
 
       <div class="profile-link">
-        <a href="#" class="card-link">Go to swipe</a>
+        <%= image_tag("rockt_button.png",  :class => "img-fluid", :alt => "footer")    %>
       </div>
       </div>
     </div>
@@ -91,8 +98,3 @@
 
 
 
- <div class="navbar-background footer fixed-bottom">
-        <div class="footer-top d-flex justify-content-center">
-            <%= image_tag("footer.png", :class => "img-fluid", :alt => "footer") %>
-        </div>
-    </div>
