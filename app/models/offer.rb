@@ -1,5 +1,6 @@
 class Offer < ApplicationRecord
   has_many :filters
+  has_many :swipes
   belongs_to :recruiter_id
 
   validates :location, presence: true
