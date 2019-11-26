@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-user1 = User.create!(email: "isi3@gmail.com", password: "123456", role: "candidate", first_name: "isabell", company_photo: nil, user_photo: nil, company_name: "google")
-userr = User.create!( email: "isii3@gmail.com", password: "123456", role: "candidate", first_name: "isi", company_photo: nil, user_photo: nil, company_name: "google")
-user2 = User.create!(email: "isi4@gmail.com", password: "123456", role: "candidate", first_name: "isabell1", company_photo: nil, user_photo: nil, company_name: "google")
-user3 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candidate", first_name: "isabell2", company_photo: nil, user_photo: nil, company_name: "google")
+user1 = User.create!(email: "isi3@gmail.com", password: "123456", role: "candidate", first_name: "isabell", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
+userr = User.create!( email: "isii3@gmail.com", password: "123456", role: "candidate", first_name: "isi", last_name: "Sparrow", company_photo: nil, user_photo: nil, company_name: "google")
+user2 = User.create!(email: "isi4@gmail.com", password: "123456", role: "candidate", first_name: "isabell1", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
+user3 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candidate", first_name: "isabell2", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
 
 
 offer1 = Offer.create!(
