@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_141231) do
+ActiveRecord::Schema.define(version: 2019_11_25_163657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "filters", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "location"
+    t.string "skills"
+    t.string "benefits"
+    t.string "seniority"
+    t.string "job_type"
+    t.string "contract_type"
+    t.integer "min_salary"
+    t.string "position"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_filters_on_user_id"
+  end
+
+  create_table "offers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "location"
+    t.string "skills"
+    t.string "benefits"
+    t.string "seniority"
+    t.string "job_type"
+    t.string "contract_type"
+    t.integer "min_salary"
+    t.string "position"
+    t.text "description"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_offers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +54,15 @@ ActiveRecord::Schema.define(version: 2019_11_25_141231) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "role"
+    t.string "first_name"
+    t.string "company_photo"
+    t.string "user_photo"
+    t.string "company_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "filters", "users"
+  add_foreign_key "offers", "users"
 end

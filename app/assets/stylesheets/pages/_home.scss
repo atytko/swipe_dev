@@ -1,1 +1,68 @@
+html, body {
+  max-width: 100%;
+  height:100%;
+  overflow-x: hidden;
+}
+
+html {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, #8e1de5, #a368f4, #bd9dfd, #dbcfff, #ffffff);
+}
+
+body {
+  background: transparent;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Muli', sans-serif;
+}
+
+// .btn:focus {
+//     outline: 0;
+//     box-shadow: none;
+// }
+
+.yellow-font {
+  color: #F1CB30;
+}
+
+.carousel-indicators {
+  position: inherit;
+}
+
+.carousel-indicators > li {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.btn-get-started {
+  color: #FFFFFF;
+}
+
+
+.background-lines {
+  background-image: asset-url('lines.png');
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0.5rem;
+  height: 812px;
+  width:301px;
+  z-index: -1;
+}
+
+.custom-arrow {
+
+}
+
+.carousel-item {
+  color: #FFFFFF;
+}
+
 // Specific CSS for your home-page
