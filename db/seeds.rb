@@ -78,4 +78,17 @@ offer5 = Offer.create!(
   seniority: 'Junior'
   )
 
+  offer5 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Temporary",
+  skills: "HTML, CSS, Javascript",
+  description: "Front-end developer for a temporary project",
+  position: "Front-end developer",
+  benefits: "No benefits",
+  seniority: 'Junior'
+  )
+
 
