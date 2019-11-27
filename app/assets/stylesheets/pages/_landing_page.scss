@@ -35,12 +35,12 @@
   padding: 10px;
   color: purple;
   border-radius: 9%;
-  background: yellow;
+  background: none;
   &:hover {
-    background: purple;
+    background: none;
   }
   a {
-    color: purple;
+    color: white;
     text-decoration: none;
     &:hover {
       color: black;
