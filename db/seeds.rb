@@ -78,3 +78,4 @@ offer5 = Offer.create!(
   seniority: 'Junior'
   )
 
+
