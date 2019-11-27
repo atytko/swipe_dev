@@ -4,7 +4,6 @@ body, html {
 
 body{
   background-position: top center;
-  background-image: url('../img/lines.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -42,10 +41,17 @@ label {
   color: #7B32CC;
 }
 
-.background-lines {
+.forms-background-lines {
   background-image: asset-url('lines.png');
-   background-repeat: no-repeat;
-   position: fixed;
-  top: 0;
-  z-index: 0;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 20px;
+  z-index: -2;
 }
+
+
+
+
+

@@ -32,9 +32,25 @@
 }
 
 .btn-get-started {
-  color: #FFFFFF;
+  padding: 10px;
+  color: purple;
+  border-radius: 9%;
+  background: yellow;
+  &:hover {
+    background: purple;
+  }
+  a {
+    color: purple;
+    text-decoration: none;
+    &:hover {
+      color: black;
+    }
+  }
 }
 
+.flex-container {
+  justify-content: center;
+}
 
 .btn:focus {
     outline: 0;
@@ -52,6 +68,20 @@
   width:301px;
   z-index: 0;
 }
+
+@media (max-width: 420px) {
+  .background-lines {
+    background-image: asset-url('lines.png');
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0.5rem;
+    height: 90%;
+    width:301px;
+    z-index: 0;
+  }
+}
+
 
 .custom-arrow {
 
