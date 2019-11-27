@@ -42,3 +42,9 @@ label {
   color: #7B32CC;
 }
 
+.background-lines {
+  background-image: asset-url('lines.png');
+   background-repeat: no-repeat;
+   position: fixed;
+  top: 0;
+}
