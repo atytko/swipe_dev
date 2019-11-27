@@ -1,7 +1,7 @@
 class OffersController < ApplicationController
   def index
-    # @offers = Offer.all
-    all_filters
+    @offers = Offer.all
+    # all_filters
   end
 
   def show
