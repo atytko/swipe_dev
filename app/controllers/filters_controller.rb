@@ -1,2 +1,4 @@
 class FiltersController < ApplicationController
+
+
 end

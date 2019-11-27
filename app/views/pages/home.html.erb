@@ -54,12 +54,15 @@
   <!--button-->
   <div class="row">
     <div class="col text-center">
-      <button class="btn btn-get-started mt-3 ">
-        Get started <i class="fa fa-arrow-right custom-arrow"></i>
+      <% if user_signed_in? %>
+      <button><%= link_to "Get started", user_path(current_user.id), :class => "btn-get-started"%>
+<% else %>
+      <button><%= link_to "Get started", new_user_session_path, :class => "btn-get-started"%>
+      <% end %>
+      <i class="fa fa-arrow-right custom-arrow"></i>
       </button>
     </div>
   </div>
-
 
 </div>
 </div>
