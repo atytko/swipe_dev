@@ -26,3 +26,4 @@ offer1 = Offer.create!(
   seniority: 'junior'
   )
 
+

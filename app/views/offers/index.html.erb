@@ -1,34 +1,26 @@
-
-<div class ="navbar-background">
-<nav class="navbar navbar-expand navbar-dark bg-purple">
-    <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
-        <span class="navbar-toggler-icon"></span>
-    </a>
-</nav>
-<div id="wrapper">
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand"><a href="#">Home</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Browse jobs</a></li>
-            <li><a href="#">All matches</a></li>
-            <li><a href="#">Chats</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
-    </div>
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-
-                    </div>
-                </div>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-8 mx-auto d-block">
+          <div class="card card-custom bg-white border-white border-0 swipe-card">
+            <div class="card-custom-background">
+              <div class="card-custom-avatar">
+                <img class="img-fluid" src="./assets/img/google.png" alt="company"/>
+              </div>
+              <div class="offset-2 card-body">
+                <h4 class="card-position">Senior Engineering Manager</h4>
+                <p class="card-company">Google</p>
+              </div>
             </div>
+
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
 
 <% @offers.each do |offer|%>
 <p><%= offer.location %></p>
-
-
 <% end %>
 
 
