@@ -1,0 +1,28 @@
+<h1>Edit Filters</h1>
+
+
+<%= simple_form_for @user do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :location, as: :radio_buttons, collection: @location, wrapper: :vertical_collection_inline %>
+
+  <%= f.input :skills, as: :radio_buttons, collection: @skills, wrapper: :vertical_collection_inline%>
+
+
+  <%= f.input :seniority, as: :radio_buttons, collection: @seniority, wrapper: :vertical_collection_inline%>
+
+
+  <%= f.input :job_type, as: :radio_buttons, collection: @job_type, wrapper: :vertical_collection_inline %>
+
+  <%= f.input :contract_type, as: :radio_buttons, collection: @contract_type, wrapper: :vertical_collection_inline %>
+
+  <%= f.input :position, as: :radio_buttons, collection: @position, wrapper: :vertical_collection_inline %>
+
+  <%= f.input :benefits, as: :radio_buttons, collection: @benefits, wrapper: :vertical_collection_inline %>
+
+  <%= f.input :min_salary, collection: @min_salary, prompt: :translate %>
+
+
+  <%= f.button :submit, "Save", class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>
