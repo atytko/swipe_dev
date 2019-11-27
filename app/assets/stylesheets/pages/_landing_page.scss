@@ -36,6 +36,8 @@
   color: white;
   border-radius: 9%;
   background: none;
+  z-index:999;
+  position: relative;
   &:hover {
     background: none;
   }
