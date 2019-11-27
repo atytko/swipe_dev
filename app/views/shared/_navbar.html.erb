@@ -20,6 +20,7 @@
         <li><%= link_to "All matches", swipes_path %></li>
         <li><%= link_to "Chats", root_path %></li>
         <li><%= link_to "Settings", root_path %></li>
+        <li> <%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
     </div>
     <div id="page-content-wrapper">
