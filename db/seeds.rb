@@ -27,7 +27,8 @@ offer1 = Offer.create!(
   description: "Work for an emerging startup on the healthcare field",
   position: "Senior Developer",
   benefits: "Private health care",
-  seniority: 'Senior'
+  seniority: 'Senior',
+  company_name: "Google"
   )
 offer2 = Offer.create!(
   recruiter: User.all.sample,
@@ -39,7 +40,8 @@ offer2 = Offer.create!(
   description: "Be a developer for a medium-sized company",
   position: "Developer",
   benefits: "Dog-friendly environment",
-  seniority: 'Medium'
+  seniority: 'Medium',
+  company_name: "Facebook"
   )
 offer3 = Offer.create!(
   recruiter: User.all.sample,
@@ -51,7 +53,8 @@ offer3 = Offer.create!(
   description: "Come work with us!",
   position: "Developer",
   benefits: "No benefits",
-  seniority: 'Junior'
+  seniority: 'Junior',
+  company_name: "Amazon"
   )
 offer4 = Offer.create!(
   recruiter: User.all.sample,
@@ -63,7 +66,8 @@ offer4 = Offer.create!(
   description: "Code a mobile application for a gaming company",
   position: "Senior Developer",
   benefits: "Private health care",
-  seniority: 'Senior'
+  seniority: 'Senior',
+  company_name: "Twitter"
   )
 offer5 = Offer.create!(
   recruiter: User.all.sample,
@@ -75,10 +79,11 @@ offer5 = Offer.create!(
   description: "Front-end developer for a temporary project",
   position: "Front-end developer",
   benefits: "No benefits",
-  seniority: 'Junior'
+  seniority: 'Junior',
+  company_name: "UBS"
   )
 
-  offer5 = Offer.create!(
+  offer6 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
@@ -88,7 +93,8 @@ offer5 = Offer.create!(
   description: "Front-end developer for a temporary project",
   position: "Front-end developer",
   benefits: "No benefits",
-  seniority: 'Junior'
+  seniority: 'Junior',
+  company_name: "Accenture"
   )
 
 

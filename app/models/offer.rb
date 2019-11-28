@@ -13,4 +13,5 @@ class Offer < ApplicationRecord
   validates :description, presence: true
   validates :contract_type, presence: true
   validates :job_type, presence: true
+  validates :company_name, presence: true
 end
