@@ -13,9 +13,12 @@
     background: #8a22b1;
 }
 
-.edit-filters-button{
+.edit-filter-btn{
   color:#c795d9;
-
+  &:hover {
+  text-decoration:none;
+  color: white;
+}
 }
 
 .navbar-space-between{
