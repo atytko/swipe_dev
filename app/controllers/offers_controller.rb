@@ -4,13 +4,17 @@ class OffersController < ApplicationController
     # @swipe = Swipe.first
     @swipes = []
     @offers = offers_matches_filters
+    @new_offers = []
     @offers.each do |offer|
-      swipe = Swipe.create!(
-          user_id: current_user.id,
-          offer_id: offer.id,
-          result: true
-        )
-    @swipes << swipe
+      if Match.where(user_id: current_user.id).where(offer_id: offer.id) == []
+        swipe = Swipe.create!(
+            user_id: current_user.id,
+            offer_id: offer.id,
+            result: true
+          )
+        @new_offers << offer
+        @swipes << swipe
+      end
     end
     # byebug
   end

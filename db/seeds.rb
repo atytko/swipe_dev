@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts("Deleting DB-------")
+Match.destroy_all
 Swipe.destroy_all
 Offer.destroy_all
 User.destroy_all
