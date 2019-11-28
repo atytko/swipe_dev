@@ -57,11 +57,14 @@
     <div class="flex-container text-center">
       <div class="btn btn-get-started">
         <% if user_signed_in? %>
-          <%= link_to "Get started", user_path(current_user.id), :class => ""%>
+          <%= link_to user_path(current_user.id) do %>
+            Get started <i class="fa fa-arrow-right"></i>
+          <% end %>
         <% else %>
-          <%= link_to "Get started", new_user_session_path, :class => ""%>
+          <%= link_to new_user_session_path do %>
+            Get started <i class="fa fa-arrow-right"></i>
+          <% end %>
         <% end %>
-        <i class="fa fa-arrow-right custom-arrow"></i>
       </div>
     </div>
 
