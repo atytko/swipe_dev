@@ -22,6 +22,10 @@
 
   <%= f.input :min_salary, collection: @min_salary, prompt: :translate %>
 
+  <!-- Edit User Photo -->
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <!-- [...] -->
 
   <%= f.button :submit, "Save", class: "btn-primary" %>
   <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
