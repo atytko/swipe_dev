@@ -8,10 +8,10 @@
       <div clas = "profile">
         <div class="profile-pic-name">
           <div>  <% if @user.photo? %>
-    <%= cl_image_tag @user.photo, height: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
-           <% else %>
-    <%= image_tag image_url("default-avatar.png"), width: 400, crop: :fill, :class => "avatar-large-profile" %>
-    <% end %>
+                    <%= cl_image_tag @user.photo, height: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
+                 <% else %>
+                    <%= image_tag image_url("default-avatar.png"), width: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
+                  <% end %>
           </div>
           <div>
             <h1 class="bold-text-profile-name"><%= @user.first_name%> <%=@user.last_name %></h1>
