@@ -7,7 +7,11 @@
     <div class="col-12">
       <div clas = "profile">
         <div class="profile-pic-name">
-          <div> <%= cl_image_tag @user.photo, height: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
+          <div>  <% if @user.photo? %>
+    <%= cl_image_tag @user.photo, height: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
+           <% else %>
+    <%= image_tag image_url("default-avatar.png"), wheight: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
+    <% end %>
           </div>
           <div>
             <h1 class="bold-text-profile-name"><%= @user.first_name%> <%=@user.last_name %></h1>
@@ -15,7 +19,7 @@
           </div>
         </div>
 
-        <div class="profile-about">
+         <div class="profile-about">
           <h6 class="headingcolor">ABOUT</h6>
           <p class="fontcolor">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde consequatur nostrum provident earum omnis, impedit rerum facere accusamus, molestias, quos error veniam eligendi quisquam numquam alias dignissimos. Beatae, officiis, quae!
