@@ -4,6 +4,40 @@
 
 }
 
+// edit filters creating buttons
+
+input[type="radio"] { //select all input type = "radio"
+    height: 50px;  //change these to get correct size
+    width: 50px;
+    background: purple;
+    display:none;
+    margin:10px;
+}
+
+
+input[type=radio] + label {
+    display:inline-block;
+    margin-bottom: 20px;
+    padding: 4px 12px;
+    background-color: #e7e7e7;
+    border-color: #ddd;
+    border-radius: 10px;
+
+}
+
+.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid  ~ .form-check-label{
+  color: grey;
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+input[type=radio]:checked + label {
+   background-image: none;
+    background-color:#d0d0d0;
+    border-radius: 10px;
+}
+
 .profile-pic-name{
   display:flex;
   margin-bottom: 20px;
@@ -32,8 +66,9 @@
 }
 
 .profile-filter{
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width:20px;
 }
 
 .profile-filters-edit{
@@ -55,6 +90,17 @@
 
 }
 
+// all filters container
+.all-filters {
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+  margin-right: 30px;
+  margin-left: 39px;
+}
 // grey light
 
 .fontcolor {
@@ -83,5 +129,16 @@
 // grey slightly darker
 .button-font-color{
   color: #696a75;
+  width: 135px;
 
+}
+
+
+.edit-filter-btn{
+  color:#c795d9;
+  text-decoration: none;
+  :active{
+    color:white;
+    text-decoration: none;
+  }
 }
