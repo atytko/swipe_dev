@@ -143,3 +143,12 @@ input[type=radio]:checked + label {
     text-decoration: none;
   }
 }
+
+
+.rocket-button {
+  position: sticky;
+  bottom: 0px;
+  z-index: 0;
+
+
+}
