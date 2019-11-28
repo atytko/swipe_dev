@@ -112,10 +112,40 @@ puts("Creating offers-------")
   company_name: "swipe_dev"
   )
 
-  offer2 = Offer.create!(
+  offer45 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Permanent",
+  skills: "Javascript",
+  description: "sadfFront-end developer for a temporary project",
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
+  company_photo: "rocket.png",
+  company_name: "swipe_dev"
+  )
+
+  offer46 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Permanent",
+  skills: "Javascript",
+  description: "Front-enddasfasdfa developer for a temporary project",
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
+  company_photo: "rocket.png",
+  company_name: "swipe_dev"
+  )
+
+  offer5 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'sjdhfblajs',
   job_type: "Part-time",
   contract_type: "Permanent",
   skills: "Javascript",
@@ -130,7 +160,7 @@ puts("Creating offers-------")
   offer3 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
-  location: 'New York',
+  location: 'asdbf',
   job_type: "Part-time",
   contract_type: "Permanent",
   skills: "Javascript",
@@ -145,7 +175,7 @@ puts("Creating offers-------")
   offer4 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
-  location: 'New York',
+  location: 'Porto',
   job_type: "Part-time",
   contract_type: "Permanent",
   skills: "Javascript",
@@ -156,6 +186,14 @@ puts("Creating offers-------")
   company_photo: "rocket.png",
   company_name: "Accenture"
   )
+
+
+
+  # swipe1 = Swipe.create!(
+  #   user_id: 6,
+  #   offer_id: 3,
+  #   result:true
+  # )
 
   offer54 = Offer.create!(
   recruiter: User.all.sample,
@@ -171,6 +209,7 @@ puts("Creating offers-------")
   company_photo: "rocket.png",
   company_name: "Facebook"
   )
+
 
   offer6 = Offer.create!(
   recruiter: User.all.sample,

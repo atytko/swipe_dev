@@ -68,6 +68,7 @@
         </div>
         <% i = i + 1 %>
         <p style="display: none" id="offer_id"><%= offer.id %></p>
+        <p style="display: none" id="swipe_id"><%= Swipe.where(offer_id: offer.id).sample.id %></p>
         <% end %>
       </div>
 
