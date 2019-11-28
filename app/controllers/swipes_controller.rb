@@ -7,12 +7,12 @@ class SwipesController < ApplicationController
     @offer = Offer.find(params[:offer_id])
     @swipe = Swipe.find(params[:id])
 
-    # Match.create({
-    #     offer_id: @offer.id,
-    #     swipe_id: @swipe.id,
-    #     user_id: current_user.id
-    #     }
-    #   )
+    Match.create!({
+        offer_id: @offer.id,
+        swipe_id: @swipe.id,
+        user_id: current_user.id
+        }
+      )
   end
 
   def new
