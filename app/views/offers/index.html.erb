@@ -6,7 +6,7 @@
 
 
         <% @offers.each do |offer|%>
-        <div class="card card-custom bg-white border-white border-0 swipe-card" style="z-index: <%= i %>; top: <%= 6*i %>px; left: <%= 6*i %>px;">
+        <div class="card card-custom bg-white border-white border-0 swipe-card" data-id="<%= offer.id %>" style="z-index: <%= i %>; top: <%= 6*i %>px; left: <%= 6*i %>px;">
           <div class="card-custom-background">
             <div class="card-custom-avatar">
 <!--         <img class="img-fluid" src="./assets/img/google.png" alt="company"/>
@@ -16,6 +16,8 @@
             <% else %>
               <%= image_tag offer.company_photo %>
             <% end %>
+              <p style="display: block" id="offer_id" class="offers"><%= offer.id %></p>
+              <p style="display: none" id="swipe_id"><%= Swipe.where(offer_id: offer.id).sample.id %></p>
 
             </div>
             <div class="offset-2 card-body">
@@ -67,8 +69,7 @@
           </div>
         </div>
         <% i = i + 1 %>
-        <p style="display: none" id="offer_id"><%= offer.id %></p>
-        <p style="display: none" id="swipe_id"><%= Swipe.where(offer_id: offer.id).sample.id %></p>
+
         <% end %>
       </div>
 
