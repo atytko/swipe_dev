@@ -17,19 +17,19 @@ user2 = User.create!(email: "isi4@gmail.com", password: "123456", role: "candida
 user3 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candidate", first_name: "isabell2", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
 
 puts("Creating offers-------")
-offer1 = Offer.create!(
-  recruiter: User.all.sample,
-  min_salary: 2000,
-  location: 'London',
-  job_type: "Full-time",
-  contract_type: "Permanent",
-  skills: "Angular",
-  description: "Work for an emerging startup on the healthcare field",
-  position: "Front-end",
-  benefits: "Dog-friendly",
-  seniority: 'Junior',
-  company_name: "Google"
-  )
+# offer1 = Offer.create!(
+#   recruiter: User.all.sample,
+#   min_salary: 2000,
+#   location: 'London',
+#   job_type: "Full-time",
+#   contract_type: "Permanent",
+#   skills: "Angular",
+#   description: "Work for an emerging startup on the healthcare field",
+#   position: "Front-end",
+#   benefits: "Dog-friendly",
+#   seniority: 'Junior',
+#   company_name: "Google"
+#   )
 
 # offer1same = Offer.create!(
 #   recruiter: User.all.sample,
@@ -97,7 +97,7 @@ offer1 = Offer.create!(
 #   company_name: "UBS"
 #   )
 
-  offer6 = Offer.create!(
+  offer1 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
@@ -112,7 +112,7 @@ offer1 = Offer.create!(
   company_name: "swipe_dev"
   )
 
-  offer5 = Offer.create!(
+  offer2 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
@@ -127,7 +127,7 @@ offer1 = Offer.create!(
   company_name: "tweeets"
   )
 
-  offer7 = Offer.create!(
+  offer3 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
@@ -139,10 +139,10 @@ offer1 = Offer.create!(
   benefits: "Dog-friendly",
   seniority: 'Junior',
   company_photo: "rocket.png",
-  company_name: "A cimoany"
+  company_name: "A company"
   )
 
-  offer8 = Offer.create!(
+  offer4 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
@@ -157,11 +157,32 @@ offer1 = Offer.create!(
   company_name: "Accenture"
   )
 
-
-  swipe1 = Swipe.create!(
-    user_id: 6,
-    offer_id: 3,
-    result:true
+  offer54 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Permanent",
+  skills: "Javascript",
+  description: "Front-end developer for a temporary project",
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
+  company_photo: "rocket.png",
+  company_name: "Facebook"
   )
 
-
+  offer6 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Permanent",
+  skills: "Javascript",
+  description: "Front-end developer for a temporary project",
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
+  company_photo: "rocket.png",
+  company_name: "Cisco"
+  )
