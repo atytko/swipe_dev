@@ -3,11 +3,20 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-8 mx-auto d-block">
         <% i=1 %>
+
+
         <% @offers.each do |offer|%>
         <div class="card card-custom bg-white border-white border-0 swipe-card" style="z-index: <%= i %>; top: <%= 6*i %>px; left: <%= 6*i %>px;">
           <div class="card-custom-background">
             <div class="card-custom-avatar">
-              <img class="img-fluid" src="./assets/img/google.png" alt="company"/>
+<!--         <img class="img-fluid" src="./assets/img/google.png" alt="company"/>
+ -->
+            <% if offer.company_photo.nil? %>
+              <p>no image</p>
+            <% else %>
+              <%= image_tag offer.company_photo %>
+            <% end %>
+
             </div>
             <div class="offset-2 card-body">
               <h4 class="card-position">
@@ -52,12 +61,13 @@
             <button id="buttonReject" class="btn btn-danger btn-lg mr-5 card-custom-shadow">
               <i class="fa fa-times fa-2x"></i>
             </button>
-            <button id="buttonLike" class="btn btn-success btn-lg ml-5 card-custom-shadow">
-              <i class="fa fa-check-circle fa-2x"></i>
-            </button>
+              <button id="buttonLike" class="btn btn-success btn-lg ml-5 card-custom-shadow">
+                <i class="fa fa-check-circle fa-2x"></i>
+              </button>
           </div>
         </div>
         <% i = i + 1 %>
+        <p style="display: none" id="offer_id"><%= offer.id %></p>
         <% end %>
       </div>
 
@@ -71,4 +81,3 @@
   </div>
 </div>
 </div>
-

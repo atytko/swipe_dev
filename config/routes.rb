@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :offers
+  resources :users
   resources :filters
 
-  resources :users
-
-  resources :swipes
+  resources :offers do
+    resources :swipes
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

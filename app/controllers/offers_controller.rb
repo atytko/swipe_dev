@@ -1,7 +1,8 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.all
-    # all_filters
+    # @offers = Offer.all
+    @swipe = Swipe.first
+    all_filters
   end
 
   def show
@@ -37,14 +38,14 @@ class OffersController < ApplicationController
 
   def all_filters
     array = [match_location, match_skills, match_seniority, match_contract_type, match_job_type, match_min_salary, match_position, match_benefits]
-    matches = [true, true, true, true, true, true,true, true]
+    matches = [true, true, true, true, true, true, true, true]
 
     diff = array - matches
     diff.size > 0 ? false : true
   end
 
   def offer_params
-    params.require(:offer).permit(:user_id, :min_salary, :location, :job_type, :contract_type, :skills, :description, :position, :benefits, :company_name)
+    params.require(:offer).permit(:user_id, :min_salary, :location, :job_type, :contract_type, :skills, :description, :position, :benefits, :company_name, :company_photo)
   end
 
   def match_location
