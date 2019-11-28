@@ -112,10 +112,40 @@ offer1 = Offer.create!(
   company_name: "swipe_dev"
   )
 
-  offer5 = Offer.create!(
+  offer45 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Permanent",
+  skills: "Javascript",
+  description: "sadfFront-end developer for a temporary project",
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
+  company_photo: "rocket.png",
+  company_name: "swipe_dev"
+  )
+
+  offer46 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Permanent",
+  skills: "Javascript",
+  description: "Front-enddasfasdfa developer for a temporary project",
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
+  company_photo: "rocket.png",
+  company_name: "swipe_dev"
+  )
+
+  offer5 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'sjdhfblajs',
   job_type: "Part-time",
   contract_type: "Permanent",
   skills: "Javascript",
@@ -130,7 +160,7 @@ offer1 = Offer.create!(
   offer7 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
-  location: 'New York',
+  location: 'asdbf',
   job_type: "Part-time",
   contract_type: "Permanent",
   skills: "Javascript",
@@ -145,7 +175,7 @@ offer1 = Offer.create!(
   offer8 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
-  location: 'New York',
+  location: 'Porto',
   job_type: "Part-time",
   contract_type: "Permanent",
   skills: "Javascript",
@@ -158,10 +188,10 @@ offer1 = Offer.create!(
   )
 
 
-  swipe1 = Swipe.create!(
-    user_id: 6,
-    offer_id: 3,
-    result:true
-  )
+  # swipe1 = Swipe.create!(
+  #   user_id: 6,
+  #   offer_id: 3,
+  #   result:true
+  # )
 
 

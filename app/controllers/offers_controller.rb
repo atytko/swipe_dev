@@ -1,8 +1,17 @@
 class OffersController < ApplicationController
   def index
     # @offers = Offer.all
-    @swipe = Swipe.first
-    all_filters
+    # @swipe = Swipe.first
+    @swipes = []
+    @offers = offers_matches_filters
+    @offers.each do |offer|
+      swipe = Swipe.create!(
+          user_id: current_user.id,
+          offer_id: offer.id,
+          result:true
+        )
+    @swipes << swipe
+    end
   end
 
   def show
@@ -24,21 +33,19 @@ class OffersController < ApplicationController
 
   private
 
-  # def all_matches
-  #   @offers_location = Offer.where(location: current_user.location)
-  #   @offers_skills = Offer.where(skills: current_user.skills)
-  #   @offers_seniority = Offer.where(seniority: current_user.seniority)
-  #   @offers_contract_type = Offer.where(contract_type: current_user.contract_type)
-  #   @offers_job_type = Offer.where(job_type: current_user.job_type)
-  #   @offers_min_salary = Offer.where(min_salary: current_user.min_salary)
-  #   @offers_position = Offer.where(position: current_user.position)
-  #   @offers_benefits = Offer.where(benefits: current_user.benefits)
-  #   offers = []
+  def offers_matches_filters
+    Offer.where(location: current_user.location).where(skills: current_user.skills).where(seniority: current_user.seniority).where(contract_type: current_user.contract_type)
+                    .where(job_type: current_user.job_type).where(min_salary: current_user.min_salary).where(position: current_user.position).where(benefits: current_user.benefits)
+  end
+
+  # def get_offers
+  #   @offers = Offer.where(location: current_user.location).where(skills: current_user.skills)
+
   # end
 
   def all_filters
     array = [match_location, match_skills, match_seniority, match_contract_type, match_job_type, match_min_salary, match_position, match_benefits]
-    matches = [true, true, true, true, true, true, true, true]
+    matches = [true, true, true, true,true, true, true, true]
 
     diff = array - matches
     diff.size > 0 ? false : true

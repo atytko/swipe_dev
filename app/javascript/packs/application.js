@@ -52,7 +52,8 @@ $(document).ready(function() {
         if (pullDeltaX >= decisionVal) {
             $card.addClass("to-right");
             var offer_id = document.getElementById("offer_id").innerHTML
-             window.location.href = `/offers/${offer_id}/swipes/1`
+            var swipe_id = document.getElementById("swipe_id").innerHTML
+             window.location.href = `/offers/${offer_id}/swipes/${swipe_id}`
             console.log('action to right');
         } else if (pullDeltaX <= -decisionVal) {
             $card.addClass("to-left");

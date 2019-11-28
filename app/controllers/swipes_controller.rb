@@ -6,7 +6,7 @@ class SwipesController < ApplicationController
   def show
     @user = current_user.id
     @offer = Offer.find(params[:offer_id])
-    # @swipe = Swipe.find(params[:id])
+    @swipe = Swipe.find(params[:id])
   end
 
   def new
