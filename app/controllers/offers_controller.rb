@@ -44,7 +44,7 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:user_id, :min_salary, :location, :job_type, :contract_type, :skills, :description, :position, :benefits)
+    params.require(:offer).permit(:user_id, :min_salary, :location, :job_type, :contract_type, :skills, :description, :position, :benefits, :company_name)
   end
 
   def match_location
