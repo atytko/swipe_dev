@@ -8,10 +8,11 @@ class OffersController < ApplicationController
       swipe = Swipe.create!(
           user_id: current_user.id,
           offer_id: offer.id,
-          result:true
+          result: true
         )
     @swipes << swipe
     end
+    # byebug
   end
 
   def show

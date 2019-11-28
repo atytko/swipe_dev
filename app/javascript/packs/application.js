@@ -45,15 +45,24 @@ $(document).ready(function() {
         var likeOpacity = (opacity <= 0) ? 0 : opacity;
         $cardReject.css("opacity", rejectOpacity);
         $cardLike.css("opacity", likeOpacity);
+
+        var offer_id = document.getElementById("offer_id").innerHTML
+        console.log(offer_id)
+
+
     };
 
     function release() {
 
         if (pullDeltaX >= decisionVal) {
-            $card.addClass("to-right");
+            var card3 = $card.addClass("to-right");
+            console.log("This is $card:")
+            console.log($card[0].dataset.id)
+            console.log("this is card3:")
+            console.log(card3)
             var offer_id = document.getElementById("offer_id").innerHTML
             var swipe_id = document.getElementById("swipe_id").innerHTML
-             window.location.href = `/offers/${offer_id}/swipes/${swipe_id}`
+             window.location.href = `/offers/${$card[0].dataset.id}/swipes/${swipe_id}`
             console.log('action to right');
         } else if (pullDeltaX <= -decisionVal) {
             $card.addClass("to-left");

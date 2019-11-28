@@ -1,37 +1,17 @@
 <h2>All Matches</h2>
 
-<div class="all_matches_column">
-  <div class="all_matches_card">You matched with
-    <%= image_tag("google_logo.png", :alt => "logo", :class => "all_matches_img") %>
-    <p>offers.company_name</p>
-    <p>offers.name</p>
-  </div>
-</div>
-</div>
 
 <div class="all_matches_column">
   <div class="all_matches_card">You matched with
     <%= image_tag("google_logo.png", :alt => "logo", :class => "all_matches_img") %>
-    <p> <%=@offer.company_name  %></p>
-    <p><%=@offer.name %></p>
+    <%= @swipes.each do |swipe| %>
+    <p> <%= swipe.offer.company_name  %></p>
+    <p><%= swipe.offer.location %></p>
+
+    <% end %>
   </div>
-</div>
 </div>
 
-<div class="all_matches_column">
-  <div class="all_matches_card">You matched with
-    <%= image_tag("google_logo.png", :alt => "logo", :class => "all_matches_img") %>
-    <p>offers.company_name</p>
-    <p>offers.name</p>
-  </div>
-</div>
-</div>
 
-<div class="all_matches_column">
-  <div class="all_matches_card">You matched with
-    <%= image_tag("google_logo.png", :alt => "logo", :class => "all_matches_img") %>
-    <p>offers.company_name</p>
-    <p>offers.name</p>
-  </div>
-</div>
-</div>
+
+
