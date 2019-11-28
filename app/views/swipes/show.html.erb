@@ -5,7 +5,6 @@
   <!--Logo-->
   <div class="row">
     <div class="col-xs mx-auto d-block mt-5">
-      <%= image_tag("logo.png", :alt => "logo") %>
     </div>
   </div>
 
@@ -26,7 +25,7 @@
       <% else %>
         <%= image_tag image_url("default-avatar.png"), width: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
       <% end %>
-      <%= image_tag("google_logo.png", :class => "match_avatars", :alt => "avatar") %>
+      <%= image_tag @offer.company_photo, :class => "match_avatars", :alt => "avatar" %>
     </div>
   </div>
 

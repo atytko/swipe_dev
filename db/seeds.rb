@@ -109,7 +109,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "rocket.png",
+  company_photo: "person.png",
   company_name: "swipe_dev"
   )
 
@@ -124,7 +124,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "rocket.png",
+  company_photo: "person.png",
   company_name: "swipe_dev"
   )
 
@@ -139,7 +139,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "rocket.png",
+  company_photo: "person.png",
   company_name: "swipe_dev"
   )
 
@@ -154,7 +154,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "rocket.png",
+  company_photo: "google_logo.png",
   company_name: "tweeets"
   )
 
@@ -184,7 +184,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "rocket.png",
+  company_photo: "google_logo.png",
   company_name: "Accenture"
   )
 
@@ -207,7 +207,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "rocket.png",
+  company_photo: "google_logo.png",
   company_name: "Facebook"
   )
 
