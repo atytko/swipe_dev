@@ -33,20 +33,18 @@
         Go to chat <i class="fa fa-comment"></i>
       </button>
     </div>
+
+
+
   </div>
 
   <!--button2-->
   <div class="row">
     <div class="col text-center">
-      <button class="match_back-to-swipe_button">
-        Back to swipe  <i class="fa fa-undo-alt"></i>
-      </button>
+      <%= link_to 'Back to swipe ', offers_path, class:"match_back-to-swipe_button"%>
+       <i class="fa fa-undo-alt"></i>
     </div>
   </div>
-
-   <div class="match_rocket_button">
-        <%= image_tag("rockt_button.png",  :class => "img-fluid", :alt => "footer")    %>
-      </div>
 
 <!--footer-->
   <div class="footer fixed-bottom">

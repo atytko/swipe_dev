@@ -1,5 +1,6 @@
 .match_background {
 background-image: linear-gradient(#e1d0e8, #e3d3ea, #ffffff);
+height: 100%;
 }
 
 .match_font {
@@ -37,9 +38,11 @@ background-image: linear-gradient(#e1d0e8, #e3d3ea, #ffffff);
   border: 2px solid #AA3FD2;
   border-radius: 20px;
   background-color: white;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   font-family: ‘Muli’, sans-serif;
   height: 40px;
+  padding: 8px;
+
 }
 
 .match_background-lines {

@@ -20,81 +20,148 @@ puts("Creating offers-------")
 offer1 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 2000,
-  location: 'Lisbon',
-  job_type: "full-time",
+  location: 'London',
+  job_type: "Full-time",
   contract_type: "Permanent",
   skills: "Angular",
   description: "Work for an emerging startup on the healthcare field",
-  position: "Senior Developer",
-  benefits: "Private health care",
-  seniority: 'Senior',
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
   company_name: "Google"
   )
-offer2 = Offer.create!(
-  recruiter: User.all.sample,
-  min_salary: 1000,
-  location: 'Porto',
-  job_type: "Full-time",
-  contract_type: "Permanent",
-  skills: "PHP",
-  description: "Be a developer for a medium-sized company",
-  position: "Developer",
-  benefits: "Dog-friendly environment",
-  seniority: 'Medium',
-  company_name: "Facebook"
-  )
-offer3 = Offer.create!(
-  recruiter: User.all.sample,
-  min_salary: 2500,
-  location: 'Aveiro',
-  job_type: "Full-time",
-  contract_type: "Permanent",
-  skills: "PHP",
-  description: "Come work with us!",
-  position: "Developer",
-  benefits: "No benefits",
-  seniority: 'Junior',
-  company_name: "Amazon"
-  )
-offer4 = Offer.create!(
-  recruiter: User.all.sample,
-  min_salary: 3000,
-  location: 'Lisbon',
-  job_type: "Part-time",
-  contract_type: "Permanent",
-  skills: "Java",
-  description: "Code a mobile application for a gaming company",
-  position: "Senior Developer",
-  benefits: "Private health care",
-  seniority: 'Senior',
-  company_name: "Twitter"
-  )
-offer5 = Offer.create!(
-  recruiter: User.all.sample,
-  min_salary: 4000,
-  location: 'Faro',
-  job_type: "Part-time",
-  contract_type: "Temporary",
-  skills: "HTML, CSS, Javascript",
-  description: "Front-end developer for a temporary project",
-  position: "Front-end developer",
-  benefits: "No benefits",
-  seniority: 'Junior',
-  company_name: "UBS"
-  )
+
+# offer1same = Offer.create!(
+#   recruiter: User.all.sample,
+#   min_salary: 2000,
+#   location: 'London',
+#   job_type: "Full-time",
+#   contract_type: "Permanent",
+#   skills: "Angular",
+#   description: "Work for an emerging startup on the healthcare field",
+#   position: "Front-end",
+#   benefits: "Dog-friendly",
+#   seniority: 'Junior',
+#   company_name: "Google"
+#   )
+# offer2 = Offer.create!(
+#   recruiter: User.all.sample,
+#   min_salary: 1000,
+#   location: 'Porto',
+#   job_type: "Full-time",
+#   contract_type: "Permanent",
+#   skills: "PHP",
+#   description: "Be a developer for a medium-sized company",
+#   position: "Developer",
+#   benefits: "Dog-friendly environment",
+#   seniority: 'Medium',
+#   company_name: "Facebook"
+#   )
+# offer3 = Offer.create!(
+#   recruiter: User.all.sample,
+#   min_salary: 2500,
+#   location: 'Aveiro',
+#   job_type: "Full-time",
+#   contract_type: "Permanent",
+#   skills: "PHP",
+#   description: "Come work with us!",
+#   position: "Developer",
+#   benefits: "No benefits",
+#   seniority: 'Junior',
+#   company_name: "Amazon"
+#   )
+# offer4 = Offer.create!(
+#   recruiter: User.all.sample,
+#   min_salary: 3000,
+#   location: 'Lisbon',
+#   job_type: "Part-time",
+#   contract_type: "Permanent",
+#   skills: "Java",
+#   description: "Code a mobile application for a gaming company",
+#   position: "Senior Developer",
+#   benefits: "Private health care",
+#   seniority: 'Senior',
+#   company_name: "Twitter"
+#   )
+# offer5 = Offer.create!(
+#   recruiter: User.all.sample,
+#   min_salary: 4000,
+#   location: 'Faro',
+#   job_type: "Part-time",
+#   contract_type: "Temporary",
+#   skills: "HTML, CSS, Javascript",
+#   description: "Front-end developer for a temporary project",
+#   position: "Front-end developer",
+#   benefits: "No benefits",
+#   seniority: 'Junior',
+#   company_name: "UBS"
+#   )
 
   offer6 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
   job_type: "Part-time",
-  contract_type: "Temporary",
-  skills: "HTML, CSS, Javascript",
+  contract_type: "Permanent",
+  skills: "Javascript",
   description: "Front-end developer for a temporary project",
-  position: "Front-end developer",
-  benefits: "No benefits",
+  position: "Front-end",
+  benefits: "Dog-friendly",
   seniority: 'Junior',
+  company_photo: "rocket.png",
+  company_name: "swipe_dev"
+  )
+
+  offer5 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Permanent",
+  skills: "Javascript",
+  description: "Front-end developer for a temporary project",
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
+  company_photo: "rocket.png",
+  company_name: "tweeets"
+  )
+
+  offer7 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Permanent",
+  skills: "Javascript",
+  description: "Front-end developer for a temporary project",
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
+  company_photo: "rocket.png",
+  company_name: "A cimoany"
+  )
+
+  offer8 = Offer.create!(
+  recruiter: User.all.sample,
+  min_salary: 4000,
+  location: 'New York',
+  job_type: "Part-time",
+  contract_type: "Permanent",
+  skills: "Javascript",
+  description: "Front-end developer for a temporary project",
+  position: "Front-end",
+  benefits: "Dog-friendly",
+  seniority: 'Junior',
+  company_photo: "rocket.png",
   company_name: "Accenture"
+  )
+
+
+  swipe1 = Swipe.create!(
+    user_id: 6,
+    offer_id: 3,
+    result:true
   )
 
 

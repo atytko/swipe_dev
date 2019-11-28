@@ -51,6 +51,8 @@ $(document).ready(function() {
 
         if (pullDeltaX >= decisionVal) {
             $card.addClass("to-right");
+            var offer_id = document.getElementById("offer_id").innerHTML
+             window.location.href = `/offers/${offer_id}/swipes/1`
             console.log('action to right');
         } else if (pullDeltaX <= -decisionVal) {
             $card.addClass("to-left");
@@ -108,6 +110,7 @@ $(document).ready(function() {
       pullDeltaX = 350;
       pullChange();
       release();
+
     });
 
     $(document).on("click", "#buttonReject", function(){
