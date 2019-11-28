@@ -21,7 +21,12 @@
 <!--Avatars-->
  <div class="row">
     <div class="col-xs mx-auto d-block mt-5">
-      <%= image_tag("girl1.jpg", :class => "match_avatars", :alt => "avatar") %><%= image_tag("google_logo.png", :class => "match_avatars", :alt => "avatar") %>
+      <% if @current_user.photo? %>
+        <%= cl_image_tag @current_user.photo, :class => "match_avatars", :alt => "avatar" %>
+      <% else %>
+        <%= image_tag image_url("default-avatar.png"), width: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
+      <% end %>
+      <%= image_tag("google_logo.png", :class => "match_avatars", :alt => "avatar") %>
     </div>
   </div>
 
@@ -39,11 +44,14 @@
 
   <!--button2-->
   <div class="row">
-    <div class="col text-center">
-      <%= link_to 'Back to swipe ', offers_path, class:"match_back-to-swipe_button"%>
-       <i class="fa fa-undo-alt"></i>
+    <div class="col text-center" >
+      <%= link_to offers_path, :class => "match_back-to-swipe_button" do %>
+       <span>Back to swipe</span> <i class="fa fa-undo-alt"></i>
+       <% end %>
     </div>
   </div>
+
+
 
 <!--footer-->
   <div class="footer fixed-bottom">
