@@ -1,29 +1,6 @@
   <div class = "match_background">
   <div class ="navbar-background">
-    <div class="background-lines"></div>
-
-<nav class="navbar navbar-expand navbar-dark bg-purple">
-    <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
-        <span class="navbar-toggler-icon"></span>
-    </a>
-</nav>
-<div id="wrapper">
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand"><a href="#"> Home </a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Browse jobs</a></li>
-            <li><a href="#">All matches</a></li>
-            <li><a href="#">Chats</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
-    </div>
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                    </div>
-                </div>
-            </div>
+    <div class="match_background-lines"></div>
 
 
   <!--Logo-->
@@ -37,7 +14,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs mx-auto d-block mt-3">
-        <h4 class="red-font"> <b> match = <span class="result">true</span> </b> </h4>
+        <h4 class="match_font"> <b> match = <span class="match_result_font">true</span> </b> </h4>
       </div>
     </div>
   </div>
@@ -45,14 +22,14 @@
 <!--Avatars-->
  <div class="row">
     <div class="col-xs mx-auto d-block mt-5">
-      <%= image_tag("girl1.jpg", :class => "avatar", :alt => "avatar") %><%= image_tag("google_logo.png", :class => "avatar", :alt => "avatar") %>
+      <%= image_tag("girl1.jpg", :class => "match_avatars", :alt => "avatar") %><%= image_tag("google_logo.png", :class => "match_avatars", :alt => "avatar") %>
     </div>
   </div>
 
   <!--button1-->
   <div class="row">
     <div class="col text-center">
-      <button class="go-to-chat">
+      <button class="match_go-to-chat_button">
         Go to chat <i class="fa fa-comment"></i>
       </button>
     </div>
@@ -61,11 +38,15 @@
   <!--button2-->
   <div class="row">
     <div class="col text-center">
-      <button class="back-to-swipe">
+      <button class="match_back-to-swipe_button">
         Back to swipe  <i class="fa fa-undo-alt"></i>
       </button>
     </div>
   </div>
+
+   <div class="match_rocket_button">
+        <%= image_tag("rockt_button.png",  :class => "img-fluid", :alt => "footer")    %>
+      </div>
 
 <!--footer-->
   <div class="footer fixed-bottom">

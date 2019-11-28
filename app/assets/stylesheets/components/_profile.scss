@@ -7,19 +7,23 @@
 .profile-pic-name{
   display:flex;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
   align-items: center;
-  justify-content: space-between;
+
   margin-left: 30px;
+  margin-right:10px;
 
 }
 
 .profile-about{
   margin-left: 30px;
+  margin-bottom: 20px;
+  margin-right: 30px;
 }
 
 .profile-experience{
   margin-left: 30px;
+  margin-bottom: 20px;
 
   .experience-font{
     color: #464648;
@@ -29,18 +33,38 @@
 
 .profile-filter{
   margin-left: 30px;
+  margin-bottom: 30px;
 }
+
+.profile-filters-edit{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+
+}
+
 
 .profile-link{
-  margin-left: 30px;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom:16px;
+
 }
 
-
+// grey light
 
 .fontcolor {
   color: #9c9c9c;
+  // text-overflow: ellipsis;
+  // overflow: overlay;
+  word-break: break-all;
 }
 
+// grey slightly lighter
 .headingcolor {
   color: #dadada;
 }
@@ -51,6 +75,13 @@
   color: #464648;
 }
 
+.email-text-profile{
+  margin-left:20px;
+  color: #464648;
+}
+
+// grey slightly darker
 .button-font-color{
   color: #696a75;
+
 }

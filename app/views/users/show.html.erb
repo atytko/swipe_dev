@@ -1,89 +1,89 @@
-<div class ="navbar-background">
+<!-- navbar -->
 
-<nav class="navbar navbar-expand navbar-dark bg-purple">
-    <a href="#menu-toggle" id="menu-toggle" class="navbar-brand">
-        <span class="navbar-toggler-icon"></span>
-    </a>
-</nav>
-<div id="wrapper">
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand"><a href="#"> IT WORKS!!!! </a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Shortcuts</a></li>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
 
-                    </div>
-                </div>
-            </div>
+<!-- profile page -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div clas = "profile">
+        <div class="profile-pic-name">
+          <div> <img class="avatar-large-profile" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" /></div>
+          <div>
+            <h1 class="bold-text-profile-name"><%= @user.first_name%> <%=@user.last_name %></h1>
+            <h5 class="email-text-profile"><%= @user.email %></h5>
+          </div>
+        </div>
+        <div class="profile-about">
+          <h6 class="headingcolor">ABOUT</h6>
+          <p class="fontcolor">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde consequatur nostrum provident earum omnis, impedit rerum facere accusamus, molestias, quos error veniam eligendi quisquam numquam alias dignissimos. Beatae, officiis, quae!
+          </p>
         </div>
 
-</div>
+        <div class="profile-experience">
+          <h6 class="headingcolor">EXPERIENCE</h6>
+          <p class="experience-font">input of linkedin?</p>
+          <hr class="experience-font">
+          <p class="experience-font">more information</p>
+          <hr class="experience-font">
+        </div>
 
-<div class=profile-page>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-6">
-      <div clas = "profile">
-      <div class="profile-pic-name">
-        <div> <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" /></div>
-        <div> <h1 class="bold-text-profile-name"><%= @user.first_name %></h1></div>
-      </div>
-      <div class="profile-about">
+        <div class="profile-filter">
 
-        <h6 class="headingcolor">ABOUT</h6>
-        <p class="fontcolor"> TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-        TextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-      TextTextTextTextTextTextTextTextTextTextTextText</p>
-      </div>
+          <div class="headingcolor"> SKILLS: </div>
 
-      <div class="profile-experience">
-        <h6 class="headingcolor">EXPERIENCE</h6>
-        <p class="experience-font">input of linkedin?</p>
-        <hr class="experience-font">
-        <p class="experience-font">more information</p>
-        <hr class="experience-font">
-      </div>
+          <button class="button-font-color rounded-button"> <%=  @user.skills %></button>
+        </div>
 
-      <div class="profile-filter">
-        <p class="headingcolor"> SKILLS</p>
+        <div class="profile-filter">
+          <div class="headingcolor"> LOCATION: </div>
+          <button class="button-font-color rounded-button"> <%=  @user.location %></button>
+        </div>
 
-        <button class="button-font-color rounded-button"> Ruby</button> <button> PHP</button> <button> JS</button>
-      </div>
+        <div class="profile-filter">
+          <div class="headingcolor"> SENIORITY: </div>
+          <button class="button-font-color rounded-button"> <%=  @user.seniority %></button>
+        </div>
 
-      <div class="profile-filter">
-        <p>Languages:</p>
+        <div class="profile-filter">
+          <div class="headingcolor"> POSITION: </div>
+          <button class="button-font-color rounded-button"> <%=  @user.position %></button>
+        </div>
 
-        <button> german</button> <button> portuegese</button> <button> JS</button>
-      </div>
+        <div class="profile-filter">
+          <div class="headingcolor"> JOB-TYPE: </div>
+          <button class="button-font-color rounded-button"> <%=  @user.job_type %></button>
+        </div>
 
-      <div class="profile-link">
-        <a href="#" class="card-link">link</a>
-      </div>
+        <div class="profile-filter">
+          <div class="headingcolor"> CONTRACT-TYPE: </div>
+          <button class="button-font-color rounded-button"> <%=  @user.contract_type %></button>
+        </div>
+
+        <div class="profile-filter">
+          <div class="headingcolor"> MIN-SALARY: </div>
+          <button class="button-font-color rounded-button"> <%=  @user.min_salary %></button>
+        </div>
+
+        <div class="profile-filter">
+          <div class="headingcolor"> BENEFITS: </div>
+          <button class="button-font-color rounded-button"> <%=  @user.benefits %></button>
+        </div>
+
+        <div class="profile-link">
+          <%= image_tag("rockt_button.png",  :class => "img-fluid", :alt => "footer")    %>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
 
 
-<!-- :email, :role, :first_name, :company_name, :company_photo, :user_photo) -->
+<!--  <p><%= @user.location %> </p>
+  <p><%= @user.seniority %> </p> -->
+  <!-- :email, :role, :first_name, :company_name, :company_photo, :user_photo) -->
 
 
 
 
 
- <div class="navbar-background footer fixed-bottom">
-        <div class="footer-top d-flex justify-content-center">
-            <%= image_tag("footer.png", :class => "img-fluid", :alt => "footer") %>
-        </div>
-    </div>

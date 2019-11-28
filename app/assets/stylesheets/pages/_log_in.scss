@@ -1,0 +1,54 @@
+body, html {
+  height: 100%;
+}
+
+body{
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: contain;
+}
+
+.button-sign-in {
+  color: white;
+  background: #7B32CC;
+  border-radius: 1rem;
+  font-weight: lighter;
+}
+
+.button-sign-in:hover{
+  color:#ffffff;
+  background: #8D68D5;
+}
+
+/* Form */
+.form-control {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #E3D5EF;
+  border-radius: 0px;
+  background: transparent;
+}
+
+.form-control:focus {
+  background: transparent;
+}
+
+label {
+  color: #7B32CC;
+}
+
+/* Colors */
+.color-purple {
+  color: #7B32CC;
+}
+
+/* Login */
+.login-extra-links a {
+  color: #7B32CC;
+}
+
+.login-extra-links a:hover{
+  color:black;
+  text-decoration: none;
+}

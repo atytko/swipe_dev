@@ -1,0 +1,57 @@
+body, html {
+  height: 100%;
+}
+
+body{
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.button-sign-up {
+  color: white;
+  background: #7B32CC;
+  border-radius: 1rem;
+  font-weight: lighter;
+}
+
+.button-sign-up:hover{
+  color:#ffffff;
+  background: #8D68D5;
+}
+
+.form-control {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #E3D5EF;
+  border-radius: 0px;
+  background: transparent;
+}
+
+.form-control:focus {
+  background: transparent;
+}
+
+label {
+  color: #7B32CC;
+}
+
+/* Colors */
+.color-purple {
+  color: #7B32CC;
+}
+
+.forms-background-lines {
+  background-image: asset-url('lines.png');
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 20px;
+  z-index: -2;
+}
+
+
+
+
+
