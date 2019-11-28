@@ -24,7 +24,7 @@
       <% if @current_user.photo? %>
         <%= cl_image_tag @current_user.photo, :class => "match_avatars", :alt => "avatar" %>
       <% else %>
-        <%= image_tag image_url("default-avatar.png"), width: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
+        <%= image_tag image_url("default-avatar.png"), :class => "match_avatars", :alt => "avatar" %>
       <% end %>
       <%= image_tag("google_logo.png", :class => "match_avatars", :alt => "avatar") %>
     </div>
