@@ -1,9 +1,8 @@
 <div id="page-content-wrapper">
   <div class="container-fluid">
-    <div class="row">
+    <div class="row offers-block-list">
       <div class="col-sm-12 col-md-12 col-lg-8 mx-auto d-block">
         <% i=1 %>
-
 
         <% @new_offers.each do |offer|%>
         <div class="card card-custom bg-white border-white border-0 swipe-card" data-id="<%= offer.id %>" style="z-index: <%= i %>; top: <%= 6*i %>px; left: <%= 6*i %>px;">
