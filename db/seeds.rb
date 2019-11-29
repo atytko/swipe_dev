@@ -51,7 +51,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "accenture.jpeg",
+  company_photo: "accenture.jpg",
   company_name: "Accenture"
   )
 
@@ -156,7 +156,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "cisco.jpeg",
+  company_photo: "cisco.jpg",
   company_name: "Cisco"
   )
 
@@ -246,7 +246,7 @@ offer14 = Offer.create!(
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Intermediate',
-  company_photo: "microsoft.jpeg",
+  company_photo: "microsoft.jpg",
   company_name: "Microsoft"
   )
 
