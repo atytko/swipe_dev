@@ -14,7 +14,9 @@ height: 100%;
 }
 
 .match_avatars {
+  height: 130px;
   width: 130px;
+  crop: fill;
   margin-right: 5px;
   margin-left: 5px;
   border: 5px solid #AA3FD2;
