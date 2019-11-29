@@ -1,6 +1,7 @@
-<h3>Edit Profile</h3>
 
 
+<div class="form-edit-filters">
+  <h3>Edit Profile</h3>
 <%= simple_form_for @user do |f| %>
   <%= f.error_notification %>
 
@@ -8,6 +9,10 @@
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <!-- [...] -->
+
+  <%= f.input :first_name%>
+  <%= f.input :last_name %>
+
 
   <%= f.input :location, as: :radio_buttons, collection: @location, wrapper: :vertical_collection_inline %>
 
@@ -27,7 +32,10 @@
 
   <%= f.input :min_salary, collection: @min_salary, prompt: :translate %>
 
-  <%= f.button :submit, "Save", class: "btn btn-primary" %>
-  <%= button_tag t('buttons.cancel'), class: "btn btn-secondary", type: "submit", name: "cancel", value: true %>
-  <%= link_to "Reset", filter_path, class: "btn btn-primary", :method => :patch %>
+  <div>
+  <%= f.button :submit, "Save", class: "btn btn-primary edit-submit-button" %>
+  <%= button_tag t('buttons.cancel'), class: "btn btn-outline-secondary edit-cancel-button", type: "submit", name: "cancel", value: true %>
+  <%= link_to "Reset", filter_path, class: "btn btn-primary edit-reset-button", :method => :patch %>
+  </div>
 <% end %>
+</div>

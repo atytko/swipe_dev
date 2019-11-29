@@ -6,10 +6,10 @@ class OffersController < ApplicationController
     @offers.each do |offer|
       if Match.where(user_id: current_user.id).where(offer_id: offer.id) == []
         swipe = Swipe.create!(
-            user_id: current_user.id,
-            offer_id: offer.id,
-            result: true
-          )
+          user_id: current_user.id,
+          offer_id: offer.id,
+          result: true
+        )
         @new_offers << offer
         @swipes << swipe
       end
@@ -36,7 +36,6 @@ class OffersController < ApplicationController
   private
 
   def offers_matches_filters
-
     location = current_user.location
     skills = current_user.skills
     seniority = current_user.seniority
@@ -93,13 +92,10 @@ class OffersController < ApplicationController
     end
   end
 
-
-
   # def get_offers
   #   @offers = Offer.where(location: current_user.location).where(skills: current_user.skills)
 
   # end
-
 
   def all_filters
     array = [

@@ -1,7 +1,6 @@
 .profile-page{
    background-color: #ffffff;
    height: 100vh;
-
 }
 
 // edit filters creating buttons
@@ -38,6 +37,10 @@ input[type=radio]:checked + label {
     border-radius: 10px;
 }
 
+
+
+// Profile picture along with name and email
+
 .profile-pic-name{
   display:flex;
   margin-bottom: 20px;
@@ -48,6 +51,9 @@ input[type=radio]:checked + label {
   margin-right:10px;
 
 }
+
+// Profile Text
+
 
 .profile-about{
   margin-left: 30px;
@@ -65,6 +71,13 @@ input[type=radio]:checked + label {
   }
 }
 
+
+
+
+
+
+// all filters
+
 .profile-filter{
   margin-left: 10px;
   margin-bottom: 10px;
@@ -79,16 +92,6 @@ input[type=radio]:checked + label {
 
 }
 
-
-.profile-link{
-
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom:16px;
-
-}
 
 // all filters container
 .all-filters {
@@ -145,11 +148,49 @@ input[type=radio]:checked + label {
   }
 }
 
+.edit-submit-button{
+  background-image: none;
+  background-color:#c873d9;
+  border-radius: 10px;
+}
+
+.edit-cancel-button{
+  background-image: none;
+  background-color:white;
+  border-radius: 10px;
+  border:solid-thin;
+}
+
+.edit-reset-button{
+  background-image: none;
+  background-color:#e85656;
+  border-radius: 10px;
+  border: none;
+}
+
+
+
+// for swiping
+
+.profile-link{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom:16px;
+}
 
 .rocket-button {
   position: sticky;
   bottom: 0px;
   z-index: 0;
+}
 
 
+
+.form-edit-filters{
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom:30px;
+  margin-top: 20px;
 }

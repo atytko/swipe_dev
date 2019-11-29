@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <div clas = "profile">
+      <div class = "profile">
         <div class="profile-pic-name">
           <div>  <% if @user.photo? %>
                     <%= cl_image_tag @user.photo, height: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
@@ -16,7 +16,6 @@
           <div>
             <h1 class="bold-text-profile-name"><%= @user.first_name%> <%=@user.last_name %></h1>
             <h5 class="email-text-profile"><%= @user.email %></h5>
-
           </div>
         </div>
 
@@ -29,9 +28,9 @@
 
         <div class="profile-experience">
           <h6 class="headingcolor">EXPERIENCE</h6>
-          <p class="experience-font">input of linkedin?</p>
+          <p class="experience-font">Input/link to linkedIn</p>
           <hr class="experience-font">
-          <p class="experience-font">more information</p>
+          <p class="experience-font">More information</p>
           <hr class="experience-font">
         </div>
 
