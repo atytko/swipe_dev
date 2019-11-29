@@ -19,6 +19,7 @@ user4 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candida
 user5 = User.create!(email: "k.smith@gmail.com", password: "123456", role: "candidate", first_name: "Karen", last_name: "Smith",  company_photo: nil, user_photo: nil, company_name: "google")
 
 puts("Creating offers-------")
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -51,7 +52,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "accenture.jpeg",
+  company_photo: "accenture.jpg",
   company_name: "Accenture"
   )
 
