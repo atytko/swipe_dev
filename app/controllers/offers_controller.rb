@@ -61,7 +61,7 @@ class OffersController < ApplicationController
     end
 
     if seniority.size > 0 ? true : false
-      where["benefits"] = seniority
+      where["seniority"] = seniority
       counter_filters += 1
     end
 
