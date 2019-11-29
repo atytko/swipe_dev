@@ -2,14 +2,14 @@
 
 
 <div class="all_matches_column">
-  <div class="all_matches_card">You matched with
-    <%= image_tag("google_logo.png", :alt => "logo", :class => "all_matches_img") %>
-    <%= @swipes.each do |swipe| %>
-    <p> <%= swipe.offer.company_name  %></p>
-    <p><%= swipe.offer.location %></p>
-
-    <% end %>
-  </div>
+  You matched with:
+    <% @swipes.each do |swipe| %>
+      <div class="all_matches_card">
+        <%= image_tag swipe.offer.company_photo, :class => "all_matches_img" %>
+        <div> <p><%= swipe.offer.company_name%></p></div>
+        <div><p><%= swipe.offer.location %></p></div>
+      </div>
+    <%end%>
 </div>
 
 
