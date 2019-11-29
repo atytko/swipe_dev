@@ -17,6 +17,7 @@ userr = User.create!( email: "isii3@gmail.com", password: "123456", role: "candi
 user2 = User.create!(email: "isi4@gmail.com", password: "123456", role: "candidate", first_name: "isabell1", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
 user3 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candidate", first_name: "isabell2", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
 
+
 puts("Creating offers-------")
 # offer1 = Offer.create!(
 #   recruiter: User.all.sample,
