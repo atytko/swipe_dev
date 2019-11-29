@@ -52,6 +52,10 @@ $(document).ready(function() {
 
     };
 
+    function try_match () {
+
+    }
+
     function release() {
 
         if (pullDeltaX >= decisionVal) {
@@ -62,7 +66,7 @@ $(document).ready(function() {
             console.log(card3)
             var offer_id = document.getElementById("offer_id").innerHTML
             var swipe_id = document.getElementById("swipe_id").innerHTML
-             window.location.href = `/offers/${$card[0].dataset.id}/swipes/${swipe_id}`
+            window.location.href = `/offers/${$card[0].dataset.id}/swipes/${swipe_id}`
             console.log('action to right');
         } else if (pullDeltaX <= -decisionVal) {
             $card.addClass("to-left");
@@ -70,18 +74,18 @@ $(document).ready(function() {
         }
 
         // LOAD MORE ITEMS TO THE LIST
-        if (Math.abs(pullDeltaX) >= decisionVal) {
-            $card.addClass("inactive");
+        // if (Math.abs(pullDeltaX) >= decisionVal) {
+        //     $card.addClass("inactive");
 
-            setTimeout(function() {
-                $card.addClass("below").removeClass("inactive to-left to-right");
-                cardsCounter++;
-                if (cardsCounter === numOfCards) {
-                    cardsCounter = 0;
-                    $(".swipe-card").removeClass("below");
-                }
-            }, 300);
-        }
+        //     setTimeout(function() {
+        //         $card.addClass("below").removeClass("inactive to-left to-right");
+        //         cardsCounter++;
+        //         if (cardsCounter === numOfCards) {
+        //             cardsCounter = 0;
+        //             $(".swipe-card").removeClass("below");
+        //         }
+        //     }, 300);
+        // }
 
         setTimeout(function() {
             $card.attr("style", "").removeClass("reset")
