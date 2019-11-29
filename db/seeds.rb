@@ -19,6 +19,28 @@ user4 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candida
 user5 = User.create!(email: "k.smith@gmail.com", password: "123456", role: "candidate", first_name: "Karen", last_name: "Smith",  company_photo: nil, user_photo: nil, company_name: "google")
 
 puts("Creating offers-------")
+
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#.
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+puts("Deleting DB-------")
+Match.destroy_all
+Swipe.destroy_all
+Offer.destroy_all
+User.destroy_all
+
+puts("Creating users-------")
+user1 = User.create!(email: "isi3@gmail.com", password: "123456", role: "candidate", first_name: "isabell", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
+user2 = User.create!( email: "isii3@gmail.com", password: "123456", role: "candidate", first_name: "isi", last_name: "Sparrow", company_photo: nil, user_photo: nil, company_name: "google")
+user3 = User.create!(email: "isi4@gmail.com", password: "123456", role: "candidate", first_name: "isabell1", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
+user4 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candidate", first_name: "isabell2", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
+user5 = User.create!(email: "k.smith@gmail.com", password: "123456", role: "candidate", first_name: "Karen", last_name: "Smith",  company_photo: nil, user_photo: nil, company_name: "google")
+
+puts("Creating offers-------")
   offer1 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
@@ -30,7 +52,7 @@ puts("Creating offers-------")
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
-  company_photo: "accenture.jpeg",
+  company_photo: "accenture.jpg",
   company_name: "Accenture"
   )
 

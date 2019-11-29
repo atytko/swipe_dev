@@ -30,59 +30,66 @@
 
         <div class="profile-experience">
           <h6 class="headingcolor">EXPERIENCE</h6>
-          <p class="experience-font">Find me on LinkedIn</p>
+          <p class="fontcolor">Find me on LinkedIn</p>
           <hr class>
-          <p class="experience-font">Computer Science Degree - Baltimore Community College (2012-2015)</p>
+          <p class="fontcolor">Computer Science Degree - Baltimore Community College (2012-2015)</p>
           <hr>
         </div>
 
-      <div class="all-filters">
-        <div class="profile-filter">
-          <div class="headingcolor"> SKILLS: </div>
-          <button class="button-font-color rounded-button"> <%=  @user.skills %></button>
-        </div>
+    <div class="row">
+<!--         <div class="all-filters">
+ -->       <div class="col-6">
+            <div class="profile-filter">
+              <div class="headingcolor"> SKILLS: </div>
+              <button class="button-font-color rounded-button"><%= @user.skills %></button>
+            </div>
 
-        <div class="profile-filter">
-          <div class="headingcolor"> LOCATION: </div>
-          <button class="button-font-color rounded-button"> <%=  @user.location %></button>
-        </div>
+            <div class="profile-filter">
+              <div class="headingcolor"> LOCATION: </div>
+              <button class="button-font-color rounded-button"> <%=  @user.location %></button>
+            </div>
 
-        <div class="profile-filter">
-          <div class="headingcolor"> SENIORITY: </div>
-          <button class="button-font-color rounded-button"> <%=  @user.seniority %></button>
-        </div>
+            <div class="profile-filter">
+              <div class="headingcolor"> SENIORITY: </div>
+              <button class="button-font-color rounded-button"> <%=  @user.seniority %></button>
+            </div>
 
-        <div class="profile-filter">
-          <div class="headingcolor"> POSITION: </div>
-          <button class="button-font-color rounded-button"> <%=  @user.position %></button>
-        </div>
+            <div class="profile-filter">
+              <div class="headingcolor"> JOB-TYPE: </div>
+              <button class="button-font-color rounded-button"> <%=  @user.job_type %></button>
+            </div>
+          </div>
 
-        <div class="profile-filter">
-          <div class="headingcolor"> JOB-TYPE: </div>
-          <button class="button-font-color rounded-button"> <%=  @user.job_type %></button>
-        </div>
+          <div class="col-6">
+            <div class="profile-filter">
+              <div class="headingcolor"> POSITION: </div>
+              <button class="button-font-color rounded-button"> <%=  @user.position %></button>
+            </div>
 
-        <div class="profile-filter">
-          <div class="headingcolor"> CONTRACT-TYPE: </div>
-          <button class="button-font-color rounded-button"> <%=  @user.contract_type %></button>
-        </div>
+            <div class="profile-filter">
+              <div class="headingcolor"> CONTRACT-TYPE: </div>
+              <button class="button-font-color rounded-button"> <%=  @user.contract_type %></button>
+            </div>
 
-        <div class="profile-filter">
-          <div class="headingcolor"> MIN-SALARY: </div>
-          <button class="button-font-color rounded-button"> <%=  @user.min_salary %></button>
-        </div>
+            <div class="profile-filter">
+              <div class="headingcolor"> MIN-SALARY: </div>
+              <button class="button-font-color rounded-button"> <%=  @user.min_salary %></button>
+            </div>
 
-        <div class="profile-filter">
-          <div class="headingcolor"> BENEFITS: </div>
-          <button class="button-font-color rounded-button"> <%=  @user.benefits %></button>
-        </div>
+            <div class="profile-filter">
+              <div class="headingcolor"> BENEFITS: </div>
+              <button class="button-font-color rounded-button"> <%=  @user.benefits %></button>
+            </div>
+<!--           </div>
+ -->       </div>
 
       </div>
 
         <div class="profile-link">
-          <%= link_to offers_path do  %>
-          <%= image_tag("rockt_button.png",  :class => "rocket-button", :alt => "footer")    %>
-          <% end %>
+
+            <%= link_to offers_path, :class => "profile-link" do  %>
+            <%= image_tag("rockt_button.png",  :class => "rocket-button", :alt => "footer")    %>
+            <% end %>
 
         </div>
       </div>

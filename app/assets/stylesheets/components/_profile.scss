@@ -63,6 +63,7 @@ input[type=radio]:checked + label {
 
 .profile-experience {
   margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 20px;
 }
   .experience-font{
@@ -182,9 +183,10 @@ input[type=radio]:checked + label {
 }
 
 .rocket-button {
-  position: sticky;
+  position: fixed;
   bottom: 0px;
   z-index: 0;
+  margin-bottom: 20px;
 }
 
 
