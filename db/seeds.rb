@@ -13,10 +13,10 @@ User.destroy_all
 
 puts("Creating users-------")
 user1 = User.create!(email: "isi3@gmail.com", password: "123456", role: "candidate", first_name: "isabell", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
-userr = User.create!( email: "isii3@gmail.com", password: "123456", role: "candidate", first_name: "isi", last_name: "Sparrow", company_photo: nil, user_photo: nil, company_name: "google")
-user2 = User.create!(email: "isi4@gmail.com", password: "123456", role: "candidate", first_name: "isabell1", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
-user3 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candidate", first_name: "isabell2", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
-
+user2 = User.create!( email: "isii3@gmail.com", password: "123456", role: "candidate", first_name: "isi", last_name: "Sparrow", company_photo: nil, user_photo: nil, company_name: "google")
+user3 = User.create!(email: "isi4@gmail.com", password: "123456", role: "candidate", first_name: "isabell1", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
+user4 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candidate", first_name: "isabell2", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
+user5 = User.create!(email: "k.smith@gmail.com", password: "123456", role: "candidate", first_name: "Karen", last_name: "Smith",  company_photo: nil, user_photo: nil, company_name: "google")
 
 puts("Creating offers-------")
 # offer1 = Offer.create!(
@@ -114,14 +114,14 @@ puts("Creating offers-------")
   company_name: "swipe_dev"
   )
 
-  offer45 = Offer.create!(
+  offer2 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
   job_type: "Part-time",
   contract_type: "Permanent",
   skills: "Javascript",
-  description: "sadfFront-end developer for a temporary project",
+  description: "Front-end developer for a temporary project",
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
@@ -129,14 +129,14 @@ puts("Creating offers-------")
   company_name: "swipe_dev"
   )
 
-  offer46 = Offer.create!(
+  offer3 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
   job_type: "Part-time",
   contract_type: "Permanent",
   skills: "Javascript",
-  description: "Front-enddasfasdfa developer for a temporary project",
+  description: "Front-end developer for a temporary project",
   position: "Front-end",
   benefits: "Dog-friendly",
   seniority: 'Junior',
@@ -144,7 +144,7 @@ puts("Creating offers-------")
   company_name: "swipe_dev"
   )
 
-  offer5 = Offer.create!(
+  offer4 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'sjdhfblajs',
@@ -159,7 +159,7 @@ puts("Creating offers-------")
   company_name: "tweeets"
   )
 
-  offer3 = Offer.create!(
+  offer5 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'asdbf',
@@ -174,7 +174,7 @@ puts("Creating offers-------")
   company_name: "A company"
   )
 
-  offer4 = Offer.create!(
+  offer6 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'Porto',
@@ -197,7 +197,7 @@ puts("Creating offers-------")
   #   result:true
   # )
 
-  offer54 = Offer.create!(
+  offer7 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
@@ -213,7 +213,7 @@ puts("Creating offers-------")
   )
 
 
-  offer6 = Offer.create!(
+  offer8 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
   location: 'New York',
