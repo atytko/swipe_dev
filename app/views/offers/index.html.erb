@@ -15,7 +15,7 @@
             <% else %>
               <%= image_tag offer.company_photo %>
             <% end %>
-              <p style="display: block" id="offer_id" class="offers"><%= offer.id %></p>
+              <p style="display: block" id="offer_id" class="offers"><% offer.id %></p>
               <p style="display: none" id="swipe_id"><%= Swipe.where(offer_id: offer.id).sample.id %></p>
 
             </div>
