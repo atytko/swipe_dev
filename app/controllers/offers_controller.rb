@@ -50,42 +50,46 @@ class OffersController < ApplicationController
 
     where = {}
 
-    if location.size > 0 ? true : false
+    if location.present? && location.size > 0
       where["location"] = location
       counter_filters += 1
     end
 
-    if skills.size > 0 ? true : false
+    if skills.present? && skills.size > 0
       where["skills"] = skills
       counter_filters += 1
     end
 
-    if seniority.size > 0 ? true : false
+    if seniority.present? && seniority.size > 0
       where["seniority"] = seniority
       counter_filters += 1
     end
 
-    if contract_type.size > 0 ? true : false
+    if contract_type.present? && contract_type.size
       where["contract_type"] = contract_type
       counter_filters += 1
     end
-    if job_type.size > 0 ? true : false
+
+    if job_type.present? && job_type.size > 0
       where["job_type"] = job_type
       counter_filters += 1
     end
-    if min_salary.to_i.size > 0 ? true : false
+
+    if min_salary.present? && min_salary.to_i.size > 0
       where["min_salary"] = min_salary.to_i..9999999
     end
-    if position.size > 0 ? true : false
+
+    if position.present? && position.size > 0
       where["position"] = position
       counter_filters += 1
     end
-    if benefits.size > 0 ? true : false
+
+    if benefits.present? && benefits.size > 0
       where["benefits"] = benefits
       counter_filters += 1
     end
 
-    if(counter_filters > 0)
+    if counter_filters > 0
       Offer.where(where)
     else
       Offer.all

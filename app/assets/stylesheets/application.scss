@@ -14,14 +14,42 @@
 @import "components/match_card";
 
 
-
-
 html, body {
   height: 100%;
   overflow-x:hidden;
+  font-family: 'Muli', sans-serif;
 }
 
+/* Global Pages Configurations */
+.background-lines {
+  background: url(lines.png) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  position: fixed;
+  top: 0;
+  left: 0.5rem;
+  width:20rem;
+  height: calc(100%);
+  z-index: 0;
+}
+
+#menu-toggle {
+  position: relative;
+  z-index:999;
+}
 
 .overflow-hidden {
   overflow:hidden;
 }
+
+/* Opacity Levels */
+.opacity-level-8 {
+  opacity: 0.8;
+}
+
+.opacity-level-2 {
+  opacity: 0.2;
+}
+

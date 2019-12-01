@@ -13,7 +13,6 @@
   <%= f.input :first_name%>
   <%= f.input :last_name %>
 
-
   <%= f.input :location, as: :radio_buttons, collection: @location, wrapper: :vertical_collection_inline %>
 
   <%= f.input :skills, as: :radio_buttons, collection: @skills, wrapper: :vertical_collection_inline%>
@@ -30,7 +29,8 @@
 
   <%= f.input :benefits, as: :radio_buttons, collection: @benefits, wrapper: :vertical_collection_inline %>
 
-  <%= f.input :min_salary, collection: @min_salary, prompt: :translate %>
+  <%= f.label :min_salary, 'Min. monthly salary' %>
+  <%= f.input :min_salary, collection: @min_salary, prompt: :translate, label: false %>
 
   <div>
   <%= f.button :submit, "Save", class: "btn btn-primary edit-submit-button" %>

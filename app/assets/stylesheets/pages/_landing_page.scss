@@ -5,13 +5,11 @@
   background-repeat: no-repeat;
   background-image: linear-gradient(to top, #8e1de5, #a368f4, #bd9dfd, #dbcfff, #ffffff);
   max-width: 100%;
-  height:100vh;
+  height:100%;
   overflow-x: hidden;
   //background: transparent;
   font-family: 'Muli', sans-serif;
 }
-
-
 
 .yellow-font {
   color: #F1CB30;
@@ -59,34 +57,8 @@
     box-shadow: none;
 }
 
-
-.background-lines {
-  background-image: asset-url('lines.png');
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  left: 0.5rem;
-  height: 812px;
-  width:301px;
-  z-index: 0;
-}
-
-@media (max-width: 420px) {
-  .background-lines {
-    background-image: asset-url('lines.png');
-    background-repeat: no-repeat;
-    position: fixed;
-    top: 0;
-    left: 0.5rem;
-    height: 90%;
-    width:301px;
-    z-index: 0;
-  }
-}
-
-
-.custom-arrow {
-
+.container {
+  position: relative;
 }
 
 .carousel-item {
@@ -97,6 +69,3 @@
   height: 260px;
   margin-top: 10px;
 }
-
-// Specific CSS for your home-page
-

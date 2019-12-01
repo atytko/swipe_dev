@@ -18,20 +18,39 @@
 
 .card-custom {
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    box-shadow: 0 0 1px rgba(10, 10, 10, 0.5);
     width: 321px;
     height: 567px;
     position: absolute;
 }
 
+.card-custom-avatar {
+  width: 70px;
+  height: 70px;
+  overflow:hidden;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+
+}
+
 .card-custom-avatar img {
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
-    position: absolute;
-    top: 1.25rem;
-    left: 1.25rem;
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
+  top: 0.50rem;
+  left: 0.60rem;
+  position: relative;
+}
+
+.card-custom-position {
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.card-custom-company {
+  font-size: 1rem;
+  opacity:0.4;
+  font-weight: 600;
 }
 
 .card-position {
@@ -52,6 +71,7 @@
 .card-feature {
     border-top: 1px solid #D6D6D6;
     border-bottom: 1px solid #D6D6D6;
+    flex-grow: 0;
 }
 
 .card-feature-item {
@@ -63,8 +83,18 @@
 }
 
 .card-feature-item small {
-    color: #999999;
-    text-transform: uppercase;
+  color: #999999;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.card-item-title {
+}
+
+.card-item-description {
+  opacity:0.4;
+  font-size: 0.9rem;
 }
 
 .swipe-card {
@@ -72,7 +102,6 @@
     border-radius: 8px;
     overflow: hidden;
     position: absolute;
-    will-change: transform;
     cursor: -webkit-grab;
     cursor: -moz-grab;
     cursor: grab;
@@ -174,10 +203,31 @@
     cursor: grab;
 }
 
-.fa-check-circle {
-  color: white;
+.button-accept {
+  width: 60px;
+  color: #ffffff;
+  border-radius: 50%;
+  background: #14c343;
+  border: none;
 }
 
-.company-name-p {
-width: 200px;
+.button-accept:hover {
+  color: #14c343;
+  background: transparent;
 }
+
+.button-reject {
+  width: 60px;
+  color: #ffffff;
+  border-radius: 50%;
+  background: #DA181B;
+  border: none;
+}
+
+.button-reject:hover {
+  color: #DA181B;
+  background: transparent;
+}
+
+
+
