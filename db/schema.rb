@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_095635) do
+ActiveRecord::Schema.define(version: 2019_12_02_113456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 2019_12_02_095635) do
     t.string "position"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_filters_on_user_id"
+  end
+
+  create_table "identities", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "provider"
+    t.string "uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_identities_on_user_id"
   end
 
   create_table "matches", force: :cascade do |t|
@@ -103,6 +112,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_095635) do
   end
 
   add_foreign_key "filters", "users"
+  add_foreign_key "identities", "users"
   add_foreign_key "matches", "offers"
   add_foreign_key "matches", "swipes"
   add_foreign_key "matches", "users"
