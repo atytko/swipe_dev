@@ -26,7 +26,6 @@ $(function() {
 // <--swiping-->
 
 $(document).ready(function() {
-
     var animating = false;
     var cardsCounter = 0;
     var numOfCards = 6;
@@ -36,20 +35,15 @@ $(document).ready(function() {
     var $card, $cardReject, $cardLike;
 
     function pullChange() {
-        animating = true;
-        deg = pullDeltaX / 10;
-        $card.css("transform", "translateX(" + pullDeltaX + "px) rotate(" + deg + "deg)");
+      animating = true;
+      deg = pullDeltaX / 10;
+      $card.css("transform", "translateX(" + pullDeltaX + "px) rotate(" + deg + "deg)");
 
-        var opacity = pullDeltaX / 100;
-        var rejectOpacity = (opacity >= 0) ? 0 : Math.abs(opacity);
-        var likeOpacity = (opacity <= 0) ? 0 : opacity;
-        $cardReject.css("opacity", rejectOpacity);
-        $cardLike.css("opacity", likeOpacity);
-
-        var offer_id = document.getElementById("offer_id").innerHTML
-        console.log(offer_id)
-
-
+      var opacity = pullDeltaX / 100;
+      var rejectOpacity = (opacity >= 0) ? 0 : Math.abs(opacity);
+      var likeOpacity = (opacity <= 0) ? 0 : opacity;
+      $cardReject.css("opacity", rejectOpacity);
+      $cardLike.css("opacity", likeOpacity);
     };
 
     function try_match () {
@@ -57,21 +51,23 @@ $(document).ready(function() {
     }
 
     function release() {
+      if (pullDeltaX >= decisionVal) {
+        $card.addClass("to-right");
+      } else {
+        $card.addClass("to-left");
+      }
 
-        if (pullDeltaX >= decisionVal) {
-            var card3 = $card.addClass("to-right");
-            console.log("This is $card:")
-            console.log($card[0].dataset.id)
-            console.log("this is card3:")
-            console.log(card3)
-            var offer_id = document.getElementById("offer_id").innerHTML
-            var swipe_id = document.getElementById("swipe_id").innerHTML
-            window.location.href = `/offers/${$card[0].dataset.id}/swipes/${swipe_id}`
-            console.log('action to right');
-        } else if (pullDeltaX <= -decisionVal) {
-            $card.addClass("to-left");
-            console.log('action to left');
-        }
+      Rails.ajax({
+        url: `/offers/${$card[0].dataset.id}/swipes`,
+        type: "POST",
+        data: `swipe[result]=${pullDeltaX >= decisionVal ? 1 : 0}`,
+        success: function(data) {
+          if (data.result) {
+            window.location.href = `/swipes/${data.id}`;
+          }
+        },
+        error: function(data) {}
+      });
 
         // LOAD MORE ITEMS TO THE LIST
         // if (Math.abs(pullDeltaX) >= decisionVal) {
@@ -103,6 +99,7 @@ $(document).ready(function() {
         $card = $(this);
         $cardReject = $(".swipe-card-choice.m--reject", $card);
         $cardLike = $(".swipe-card-choice.m--like", $card);
+
         var startX = e.pageX || e.originalEvent.touches[0].pageX;
 
         $(document).on("mousemove touchmove", function(e) {
@@ -124,7 +121,6 @@ $(document).ready(function() {
       pullDeltaX = 350;
       pullChange();
       release();
-
     });
 
     $(document).on("click", "#buttonReject", function(){

@@ -2,9 +2,8 @@
   <div class="container-fluid">
     <div class="row offers-block-list">
       <div class="col-sm-12 col-md-12 col-lg-8 mx-auto d-block noselect">
-        <% i=1 %>
-        <% @new_offers.each do |offer|%>
-          <div class="card card-custom bg-white border-white border-0 swipe-card" data-id="<%= offer.id %>" style="z-index: <%= i %>; top: <%= 0.2*i %>px; left: <%= 0.8*i %>px;">
+        <% @offers.each_with_index do |offer, index|%>
+          <div class="card card-custom bg-white border-white border-0 swipe-card" data-id="<%= offer.id %>" style="z-index: <%= index + 1 %>; top: <%= 0.2 * (index + 1) %>px; left: <%= 0.8* (index + 1) %>px;">
             <div class="card-custom-background">
               <div class="row">
                 <div class="col-3">
@@ -12,8 +11,6 @@
                     <% unless offer.company_photo.nil? %>
                       <%= image_tag offer.company_photo %>
                     <% end %>
-                    <p style="display: block" id="offer_id" class="offers"><% offer.id %></p>
-                    <p style="display: none" id="swipe_id"><%= Swipe.where(offer_id: offer.id).sample.id %></p>
                   </div>
                 </div>
                 <div class="col-9">
@@ -63,7 +60,6 @@
               </button>
             </div>
           </div>
-          <% i = i + 1 %>
         <% end %>
       </div>
     </div>

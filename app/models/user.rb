@@ -4,6 +4,8 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   has_many :offers, dependent: :destroy
   has_many :messages, dependent: :destroy
+  has_many :swipes
+
 
   def self.from_omniauth(auth)
     where(provider: auth.provider,uid: auth.uid).first_or_create do |user|

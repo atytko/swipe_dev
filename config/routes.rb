@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   resources :matches, only: [:index,:show]
 
   resources :offers do
-    resources :swipes
+    resources :swipes, only: [:create]
   end
+
+  resources :swipes, only: [:show]
 
   get '/swipes', to: 'swipes#index'
   resources :settings
