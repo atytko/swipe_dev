@@ -1,107 +1,122 @@
-<!-- navbar -->
-
-
-<!-- profile page -->
 <div class="container">
-  <div class="row">
-    <div class="col-12">
-      <div class = "profile">
-        <div class="profile-pic-name">
-          <div>  <% if @user.photo? %>
-                    <%= cl_image_tag @user.photo, height: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
-                 <% else %>
-                    <%= image_tag image_url("default-avatar.png"), width: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
-                  <% end %>
-          </div>
-          <div>
-            <h1 class="bold-text-profile-name"><%= @user.first_name%> <%=@user.last_name %></h1>
-            <h5 class="email-text-profile"><%= @user.email %></h5>
-          </div>
+  <div class="col-12">
+    <div class = "profile">
+      <div class="profile-pic-name">
+        <div>
+          <% if @user.photo? %>
+          <%= cl_image_tag @user.photo, height: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
+          <% else %>
+          <%= image_tag image_url("default-avatar.png"), width: 400, width: 400, crop: :fill, :class => "avatar-large-profile" %>
+          <% end %>
         </div>
-
-         <div class="profile-about">
-          <h6 class="headingcolor">ABOUT</h6>
-          <p class="fontcolor">
-            Hello! My name is Karen and I am a 28 year old nature-lover and free spirit ✌️
-            I worked for the past years as a fullstack developer in Baltimore mostly on PHP
-            and Javascript. But I am ready to take the next step and become
-            only a front-end developer! Hire me!</p>
+        <div>
+          <h1 class="bold-text-profile-name">
+            <%= @user.first_name%> <%=@user.last_name %>
+          </h1>
+          <h5 class="email-text-profile">
+            <%= @user.email %>
+          </h5>
         </div>
-
-        <div class="profile-experience">
-          <h6 class="headingcolor">EXPERIENCE</h6>
-          <p class="fontcolor">Find me on LinkedIn</p>
-          <hr class>
-          <p class="fontcolor">Computer Science Degree - Baltimore Community College (2012-2015)</p>
-          <hr>
-        </div>
-
-    <div class="row">
-<!--         <div class="all-filters">
- -->       <div class="col-6">
-            <div class="profile-filter">
-              <div class="headingcolor"> SKILLS: </div>
-              <button class="button-font-color rounded-button"><%= @user.skills %></button>
-            </div>
-
-            <div class="profile-filter">
-              <div class="headingcolor"> LOCATION: </div>
-              <button class="button-font-color rounded-button"> <%=  @user.location %></button>
-            </div>
-
-            <div class="profile-filter">
-              <div class="headingcolor"> SENIORITY: </div>
-              <button class="button-font-color rounded-button"> <%=  @user.seniority %></button>
-            </div>
-
-            <div class="profile-filter">
-              <div class="headingcolor"> JOB-TYPE: </div>
-              <button class="button-font-color rounded-button"> <%=  @user.job_type %></button>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="profile-filter">
-              <div class="headingcolor"> POSITION: </div>
-              <button class="button-font-color rounded-button"> <%=  @user.position %></button>
-            </div>
-
-            <div class="profile-filter">
-              <div class="headingcolor"> CONTRACT-TYPE: </div>
-              <button class="button-font-color rounded-button"> <%=  @user.contract_type %></button>
-            </div>
-
-            <div class="profile-filter">
-              <div class="headingcolor"> MIN-SALARY: </div>
-              <button class="button-font-color rounded-button"> <%=  @user.min_salary %></button>
-            </div>
-
-            <div class="profile-filter">
-              <div class="headingcolor"> BENEFITS: </div>
-              <button class="button-font-color rounded-button"> <%=  @user.benefits %></button>
-            </div>
-<!--           </div>
- -->       </div>
-
       </div>
 
-        <div class="profile-link">
+      <div class="profile-about">
+        <h6 class="headingcolor">ABOUT</h6>
+        <p class="fontcolor">
+          Hello! My name is Karen and I am a 28 year old nature-lover and free spirit ✌️
+          I worked for the past years as a full-stack developer in Baltimore mostly on PHP
+          and Javascript. But I am ready to take the next step and become
+        only a front-end developer! Hire me!</p>
+      </div>
 
-            <%= link_to offers_path, :class => "profile-link" do  %>
-            <%= image_tag("rockt_button.png",  :class => "rocket-button", :alt => "footer")    %>
-            <% end %>
+      <div class="profile-experience">
+        <h6 class="headingcolor">EXPERIENCE</h6>
+        <p class="fontcolor">Find me on LinkedIn</p>
+        <hr class>
+        <p class="fontcolor">Computer Science Degree - Baltimore Community College (2012-2015)</p>
+        <hr>
+      </div>
 
+      <div class="row">
+
+
+          <% unless @user.skills.to_s.strip.empty? %>
+            <div class="col-6 mb-3">
+              <div class="profile-filter">
+                <div class="profile-filter-label"> Skill </div>
+                <div class="profile-filter-value"><%= @user.skills %></div>
+              </div>
+            </div>
+          <% end %>
+
+          <% unless @user.location.to_s.strip.empty? %>
+            <div class="col-6 mb-3">
+              <div class="profile-filter">
+                <div class="profile-filter-label"> Location </div>
+                <div class="profile-filter-value"><i class="fa fa-map-marker-alt"></i> <%= @user.location %></div>
+              </div>
+            </div>
+          <% end %>
+
+          <% unless @user.seniority.to_s.strip.empty? %>
+            <div class="col-6 mb-3">
+              <div class="profile-filter">
+                <div class="profile-filter-label"> Seniority: </div>
+                <div class="profile-filter-value"><%= @user.seniority %></div>
+              </div>
+            </div>
+          <% end %>
+
+          <% unless @user.job_type.to_s.strip.empty? %>
+            <div class="col-6 mb-3">
+              <div class="profile-filter">
+                <div class="profile-filter-label"> Job Type </div>
+                <div class="profile-filter-value"><%= @user.job_type %></div>
+              </div>
+            </div>
+          <% end %>
+
+          <% unless @user.position.to_s.strip.empty? %>
+            <div class="col-6 mb-3">
+              <div class="profile-filter">
+                <div class="profile-filter-label">Position</div>
+                <div class="profile-filter-value"><%= @user.position %></div>
+              </div>
+            </div>
+          <% end %>
+
+          <% unless @user.contract_type.to_s.strip.empty? %>
+            <div class="col-6 mb-3">
+              <div class="profile-filter">
+                <div class="profile-filter-label">Contract Type</div>
+                <div class="profile-filter-value"><%= @user.contract_type %></div>
+              </div>
+            </div>
+          <% end %>
+
+          <% unless @user.min_salary.nil? %>
+            <div class="col-6 mb-3">
+              <div class="profile-filter">
+                <div class="profile-filter-label d-block"> Min Salary </div>
+                <div class="profile-filter-value"> <i class="fa fa-euro-sign"></i>  <%=  @user.min_salary %></div>
+              </div>
+            </div>
+          <% end %>
+
+          <% unless @user.benefits.to_s.strip.empty? %>
+            <div class="col-6 mb-3">
+              <div class="profile-filter">
+                <div class="profile-filter-label">Benefits</div>
+                <div class="profile-filter-value"> <%= @user.benefits %></div>
+              </div>
+            </div>
+          <% end %>
         </div>
+      </div>
+      <div class="profile-link">
+        <%= link_to offers_path, :class => "profile-link" do  %>
+        <%= image_tag("rockt_button.png",  :class => "rocket-button", :alt => "footer")    %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-
-
-<!--  <p><%= @user.location %> </p>
-  <p><%= @user.seniority %> </p> -->
-  <!-- :email, :role, :first_name, :company_name, :company_photo, :user_photo) -->
-
-
-
-

@@ -1,7 +1,7 @@
 <div id="page-content-wrapper">
   <div class="container-fluid">
     <div class="row offers-block-list">
-      <div class="col-sm-12 col-md-12 col-lg-8 mx-auto d-block">
+      <div class="col-sm-12 col-md-12 col-lg-8 mx-auto d-block noselect">
         <% i=1 %>
         <% @new_offers.each do |offer|%>
           <div class="card card-custom bg-white border-white border-0 swipe-card" data-id="<%= offer.id %>" style="z-index: <%= i %>; top: <%= 0.2*i %>px; left: <%= 0.8*i %>px;">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-9">
                   <h4 class="card-position mt-4 ml-2 card-custom-position">
-                    <%= offer.position %>
+                    <%= offer.position %> developer
                   </h4>
                   <div class="card-f eature-item ml-2 card-custom-company">
                     <%= offer.company_name %>
