@@ -11,5 +11,9 @@ Rails.application.routes.draw do
 
   get '/swipes', to: 'swipes#index'
   resources :settings
+
+  resources :chat_rooms, only: [ :show, :index ] do
+    resources :messages, only: [ :create ]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
