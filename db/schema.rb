@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_095635) do
+ActiveRecord::Schema.define(version: 2019_12_02_113456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chat_rooms", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "filters", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,6 +35,15 @@ ActiveRecord::Schema.define(version: 2019_12_02_095635) do
     t.index ["user_id"], name: "index_filters_on_user_id"
   end
 
+  create_table "identities", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "provider"
+    t.string "uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_identities_on_user_id"
+  end
+
   create_table "matches", force: :cascade do |t|
     t.bigint "offer_id"
     t.bigint "swipe_id"
@@ -40,6 +54,16 @@ ActiveRecord::Schema.define(version: 2019_12_02_095635) do
     t.index ["offer_id"], name: "index_matches_on_offer_id"
     t.index ["swipe_id"], name: "index_matches_on_swipe_id"
     t.index ["user_id"], name: "index_matches_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "content"
+    t.bigint "user_id"
+    t.bigint "chat_room_id"
+    t.index ["chat_room_id"], name: "index_messages_on_chat_room_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "offers", force: :cascade do |t|
@@ -103,9 +127,12 @@ ActiveRecord::Schema.define(version: 2019_12_02_095635) do
   end
 
   add_foreign_key "filters", "users"
+  add_foreign_key "identities", "users"
   add_foreign_key "matches", "offers"
   add_foreign_key "matches", "swipes"
   add_foreign_key "matches", "users"
+  add_foreign_key "messages", "chat_rooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "offers", "users"
   add_foreign_key "swipes", "offers"
   add_foreign_key "swipes", "users"

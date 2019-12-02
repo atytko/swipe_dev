@@ -19,6 +19,7 @@ user4 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candida
 user5 = User.create!(email: "k.smith@gmail.com", password: "123456", role: "candidate", first_name: "Karen", last_name: "Smith",  company_photo: nil, user_photo: nil, company_name: "google")
 
 puts("Creating offers-------")
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -39,6 +40,8 @@ user3 = User.create!(email: "isi4@gmail.com", password: "123456", role: "candida
 user4 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candidate", first_name: "isabell2", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
 user5 = User.create!(email: "k.smith@gmail.com", password: "123456", role: "candidate", first_name: "Karen", last_name: "Smith",  company_photo: nil, user_photo: nil, company_name: "google")
 
+chatroom1 =  ChatRoom.create!
+
 puts("Creating offers-------")
   offer1 = Offer.create!(
     recruiter: User.all.sample,
@@ -47,7 +50,7 @@ puts("Creating offers-------")
     job_type: "Part-time",
     contract_type: "Permanent",
     skills: "Javascript",
-    description: "Front-end developer for a short project in part-time. Remote work available.",
+    description: "Front-end developer for a short project in part-time.",
     position: "Front-end",
     benefits: "Dog-friendly",
     seniority: 'Junior',
@@ -208,7 +211,7 @@ offer11 = Offer.create!(
 offer12 = Offer.create!(
   recruiter: User.all.sample,
   min_salary: 4000,
-  location: 'Munich (remote work available)',
+  location: 'Munich',
   job_type: "Part-time",
   contract_type: "Permanent",
   skills: "Javascript",
@@ -272,7 +275,7 @@ offer16 = Offer.create!(
   job_type: "Full-time",
   contract_type: "Permanent",
   skills: "Ruby",
-  description: "Remote work available",
+  description: "Come work with us at OLX",
   position: "Back-end",
   benefits: "Dog-friendly",
   seniority: 'Senior',
