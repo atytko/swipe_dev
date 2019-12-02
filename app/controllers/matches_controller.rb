@@ -1,6 +1,6 @@
 class MatchesController < ApplicationController
   def index
-    @matches = Match.where(user_id:current_user.id)
+    @matches = Match.where(user:current_user)
   end
 
   def show

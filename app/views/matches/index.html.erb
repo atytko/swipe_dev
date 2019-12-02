@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="matches-title mt-5 mb-3">
+    <h1>Your Matches</h1>
+  </div>
+  <% @matches.each do |match| %>
+    <div class="matches-card">
+      <div class="col-xs-3">
+        <div class="matches-card-img">
+          <%= image_tag match.offer.company_photo %>
+        </div>
+      </div>
+      <div class="col-9 d-block align-self-center">
+        <div class="matches-card-company col-12 text-left">
+          <%= match.offer.company_name%>
+        </div>
+        <div class="matches-card-location col-12 text-left">
+          <%= match.offer.location %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="profile-link">
+    <%= link_to offers_path, :class => "profile-link" do  %>
+      <%= image_tag("rockt_button.png",  :class => "rocket-button", :alt => "footer")    %>
+    <% end %>
+  </div>
+</div>
