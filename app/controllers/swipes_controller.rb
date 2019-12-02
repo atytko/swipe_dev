@@ -1,16 +1,15 @@
 class SwipesController < ApplicationController
   def index
-    @swipes = Swipe.all
+    @swipes = Swipe.where(user: current_user)
   end
   def show
     @user = current_user.id
     @offer = Offer.find(params[:offer_id])
     @swipe = Swipe.find(params[:id])
-
     Match.create!({
-        offer_id: @offer.id,
-        swipe_id: @swipe.id,
-        user_id: current_user.id
+        offer: @offer,
+        swipe: @swipe,
+        user: current_user
         }
       )
   end
