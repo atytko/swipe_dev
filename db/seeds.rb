@@ -40,6 +40,8 @@ user3 = User.create!(email: "isi4@gmail.com", password: "123456", role: "candida
 user4 = User.create!(email: "isiw@gmail.com", password: "123456", role: "candidate", first_name: "isabell2", last_name: "Sparrow",  company_photo: nil, user_photo: nil, company_name: "google")
 user5 = User.create!(email: "k.smith@gmail.com", password: "123456", role: "candidate", first_name: "Karen", last_name: "Smith",  company_photo: nil, user_photo: nil, company_name: "google")
 
+chatroom1 =  ChatRoom.create!
+
 puts("Creating offers-------")
   offer1 = Offer.create!(
     recruiter: User.all.sample,
