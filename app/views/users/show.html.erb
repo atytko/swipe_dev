@@ -22,28 +22,25 @@
       <div class="profile-about">
         <h6 class="headingcolor">ABOUT</h6>
         <p class="fontcolor">
-          Hello! My name is Karen and I am a 28 year old nature-lover and free spirit ✌️
-          I worked for the past years as a full-stack developer in Baltimore mostly on PHP
-          and Javascript. But I am ready to take the next step and become
-        only a front-end developer! Hire me!</p>
+          Hello! My name is Karen and I am a 28 year old nature-lover and free spirit ✌️ I worked for the past years as a front-end developer in Baltimore mostly with Javascript (React). But I am ready to take the next step and become a full-stack developer! Hire me!</p>
       </div>
 
       <div class="profile-experience">
         <h6 class="headingcolor">EXPERIENCE</h6>
-        <p class="fontcolor">Find me on LinkedIn</p>
+        <p class="fontcolor">Find me on LinkedIn.</p>
         <hr class>
         <p class="fontcolor">Computer Science Degree - Baltimore Community College (2012-2015)</p>
         <hr>
       </div>
-
+    <div class="current-filters mb-4 mt-4">
+      <h6> CURRENT FILTERS </h6>
+    </div>
       <div class="row">
-
-
           <% unless @user.skills.to_s.strip.empty? %>
             <div class="col-6 mb-3">
               <div class="profile-filter">
                 <div class="profile-filter-label"> Skill </div>
-                <div class="profile-filter-value"> <i class="fa fa-tools fa-1x"></i> <%= @user.skills %></div>
+                <div class="profile-filter-value"> <i class="fa fa-tools"></i> <%= @user.skills %></div>
               </div>
             </div>
           <% end %>
@@ -52,7 +49,7 @@
             <div class="col-6 mb-3">
               <div class="profile-filter">
                 <div class="profile-filter-label"> Location </div>
-                <div class="profile-filter-value"><i class="fa fa-map-marker-alt fa-1x"></i>  <%= @user.location %></div>
+                <div class="profile-filter-value"> <i class="fa fa-map-marker-alt"></i>  <%= @user.location %></div>
               </div>
             </div>
           <% end %>
@@ -61,7 +58,7 @@
             <div class="col-6 mb-3">
               <div class="profile-filter">
                 <div class="profile-filter-label"> Seniority: </div>
-                <div class="profile-filter-value"> <i class="fa fa-address-card fa-1x">  </i> <%= @user.seniority %></div>
+                <div class="profile-filter-value"> <i class="fa fa-address-card">  </i>  <%= @user.seniority %></div>
               </div>
             </div>
           <% end %>
@@ -70,7 +67,7 @@
             <div class="col-6 mb-3">
               <div class="profile-filter">
                 <div class="profile-filter-label"> Job Type </div>
-                <div class="profile-filter-value"> <i class="fa fa-clock fa-1x"></i>  <%= @user.job_type %></div>
+                <div class="profile-filter-value"> <i class="fa fa-clock"></i>  <%= @user.job_type %></div>
               </div>
             </div>
           <% end %>
@@ -79,7 +76,7 @@
             <div class="col-6 mb-3">
               <div class="profile-filter">
                 <div class="profile-filter-label">Position</div>
-                <div class="profile-filter-value"> <i class="fa fa-briefcase fa-1x"></i>  <%= @user.position %></div>
+                <div class="profile-filter-value"> <i class="fa fa-briefcase"></i>  <%= @user.position %></div>
               </div>
             </div>
           <% end %>
@@ -88,7 +85,7 @@
             <div class="col-6 mb-3">
               <div class="profile-filter">
                 <div class="profile-filter-label">Contract Type</div>
-                <div class="profile-filter-value"> <i class="fa fa-file-alt fa-1x"></i>  <%= @user.contract_type %></div>
+                <div class="profile-filter-value"> <i class="fa fa-file-alt"></i>  <%= @user.contract_type %></div>
               </div>
             </div>
           <% end %>
@@ -97,7 +94,7 @@
             <div class="col-6 mb-3">
               <div class="profile-filter">
                 <div class="profile-filter-label d-block"> Min Salary </div>
-                <div class="profile-filter-value"> <i class="fa fa-euro-sign fa-1x"></i>  <%=  @user.min_salary %></div>
+                <div class="profile-filter-value"> <i class="fa fa-euro-sign"></i>  <%=  @user.min_salary %></div>
               </div>
             </div>
           <% end %>
@@ -106,7 +103,7 @@
             <div class="col-6 mb-3">
               <div class="profile-filter">
                 <div class="profile-filter-label">Benefits</div>
-                <div class="profile-filter-value"> <i class="fa fa-smile fa-1x"></i>  <%= @user.benefits %></div>
+                <div class="profile-filter-value"> <i class="fa fa-smile"></i>  <%= @user.benefits %></div>
               </div>
             </div>
           <% end %>
@@ -119,4 +116,4 @@
       </div>
     </div>
   </div>
-</div>
+
