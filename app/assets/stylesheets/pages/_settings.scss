@@ -4,6 +4,52 @@
   opacity: 0.3;
 }
 
-#customSwitches {
-background: white;
+.custom-control-label {
+  color: black;
+}
+
+.settings-item-icon i{
+  color: #c6c6c6;
+}
+
+.settings-item-label {
+  font-weight: 400;
+  color: #999;
+}
+
+/* Custom Checkbox*/
+.custom-checkbox{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 10px;
+    transition: .1s;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    cursor: pointer;
+
+}
+
+.custom-checkbox:checked{
+    background: #7727AD;
+}
+
+.custom-checkbox:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: .5s;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.custom-checkbox:checked:before{
+    left: 20px;
 }
