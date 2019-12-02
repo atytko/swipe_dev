@@ -1,19 +1,7 @@
 class OffersController < ApplicationController
   def index
-    @swipes = []
-    @offers = offers_matches_filters
-    @new_offers = []
-    @offers.each do |offer|
-      if Match.where(user_id: current_user.id).where(offer_id: offer.id) == []
-        swipe = Swipe.create!(
-          user_id: current_user.id,
-          offer_id: offer.id,
-          result: true
-        )
-        @new_offers << offer
-        @swipes << swipe
-      end
-    end
+    @swiped_offers = current_user.swipes.pluck(:offer_id)
+    @offers = offers_matches_filters.where.not(id: @swiped_offers)
   end
 
   def show

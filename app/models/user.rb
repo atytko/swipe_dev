@@ -6,4 +6,5 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   has_many :offers, dependent: :destroy
   has_many :messages, dependent: :destroy
+  has_many :swipes
 end

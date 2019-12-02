@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_114241) do
+ActiveRecord::Schema.define(version: 2019_12_02_161453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(version: 2019_12_02_114241) do
   create_table "chat_rooms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
+    t.bigint "swipe_id"
+    t.index ["swipe_id"], name: "index_chat_rooms_on_swipe_id"
   end
 
   create_table "filters", force: :cascade do |t|
@@ -127,6 +128,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_114241) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "chat_rooms", "swipes"
   add_foreign_key "filters", "users"
   add_foreign_key "identities", "users"
   add_foreign_key "matches", "offers"

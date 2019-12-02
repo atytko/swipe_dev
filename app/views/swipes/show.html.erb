@@ -17,8 +17,8 @@
     <div class="row mt-4 mb-2">
       <div class="col-6 d-flex justify-content-end pr-0">
         <div class="match-avatar card-custom-shadow animated fadeInLeft">
-          <% if @current_user.photo? %>
-            <%= cl_image_tag @current_user.photo, :class => "img-fluid rounded-circle", :alt => "avatar" %>
+          <% if current_user.photo? %>
+            <%= cl_image_tag current_user.photo, :class => "img-fluid rounded-circle", :alt => "avatar" %>
           <% else %>
             <%= image_tag image_url("default-avatar.png"), :class => "img-fluid rounded-circle", :alt => "avatar" %>
           <% end %>
@@ -26,7 +26,7 @@
       </div>
       <div class="col-6 pl-0">
         <div class="match-company card-custom-shadow animated fadeInRight">
-          <%= image_tag @offer.company_photo, :alt => "company_logo" %>
+          <%= image_tag @swipe.offer.company_photo, :alt => "company_logo" %>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
     <!--button1-->
     <div class="row">
       <div class=" btn btn-lg col-12 mt-5 mb-4 text-center">
-        <%= link_to offers_path, :class => "match-go-to-chat-button" do %>
+        <%= link_to chat_room_path(@swipe.chat_room), :class => "match-go-to-chat-button" do %>
           Go to chat <i class="fa fa-comment"></i>
         <% end %>
       </div>
