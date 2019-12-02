@@ -7,20 +7,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = current_user
-    @user = User.new(user_params)
-      if @user.save
-        redirect_to user_path(@user)
-      else
-        render 'users/new'
-      end
-  end
-
   def edit
     @user = User.find(params[:id])
     @skills = ['Ruby', 'PHP', 'Javascript', 'Angular', 'HTML', 'Python']
