@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   end
 
   get '/swipes', to: 'swipes#index'
+  resources :settings
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
