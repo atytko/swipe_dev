@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :users
+  resources :users, only:[:index, :show,:edit,:update]
   resources :filters
+  resources :matches, only: [:index,:show]
 
   resources :offers do
     resources :swipes

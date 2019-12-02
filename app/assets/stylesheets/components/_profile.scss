@@ -71,21 +71,6 @@
   margin-bottom:16px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* TO CHECK */
-
 .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid  ~ .form-check-label{
   color: grey;
 }
@@ -223,6 +208,10 @@
   border-radius: 10px;
   border:none;
   background-color: white;
+}
+
+.current-filters {
+opacity: 0.4;
 }
 
 
