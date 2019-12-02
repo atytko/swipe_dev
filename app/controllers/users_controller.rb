@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     @job_type = ['Full-time', 'Part-time']
     @min_salary = [1000, 1500, 2000, 3000, 4000, 5000, 6000, 7000, 10_000, 20_000, 30_000]
     @benefits = ['Dog-friendly', 'Private Healthcare', 'Yoga', 'Parking spot']
-    @position = ['Front-end', 'Back-end', 'Fullstack', 'Internship']
+    @position = ['Front-end', 'Back-end', 'Full-stack', 'Internship']
   end
 
   def update

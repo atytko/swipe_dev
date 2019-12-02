@@ -8,19 +8,15 @@
       </div>
     </div>
 
-    <!--Text-->
-    <div class="container">
-      <div class="row">
-        <div class="col-xs mx-auto d-block mt-3">
-          <h4 class="match_font"> <b> match = <span class="match_result_font">true</span> </b> </h4>
-        </div>
+    <div class="row">
+      <div class="col-xs mx-auto d-block mt-5 animated pulse">
+        <h4 class="match_font"> <b> match = <span class="match_result_font">true</span> </b> </h4>
       </div>
     </div>
 
-    <!--Avatars-->
-    <div class="row mt-5">
+    <div class="row mt-4 mb-2">
       <div class="col-6 d-flex justify-content-end pr-0">
-        <div class="match-avatar card-custom-shadow">
+        <div class="match-avatar card-custom-shadow animated fadeInLeft">
           <% if @current_user.photo? %>
             <%= cl_image_tag @current_user.photo, :class => "img-fluid rounded-circle", :alt => "avatar" %>
           <% else %>
@@ -29,7 +25,7 @@
         </div>
       </div>
       <div class="col-6 pl-0">
-        <div class="match-company card-custom-shadow">
+        <div class="match-company card-custom-shadow animated fadeInRight">
           <%= image_tag @offer.company_photo, :alt => "company_logo" %>
         </div>
       </div>

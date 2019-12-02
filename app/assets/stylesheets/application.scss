@@ -13,14 +13,26 @@
 @import "pages/index";
 @import "components/match_card";
 
+@import "animate";
+
 
 html, body {
   height: 100%;
-  overflow-x:hidden;
-  font-family: 'Muli', sans-serif;
+  // overflow-x:hidden;
 }
 
 /* Global Pages Configurations */
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
 .background-lines {
   background: url(lines.png) no-repeat;
   -webkit-background-size: cover;
