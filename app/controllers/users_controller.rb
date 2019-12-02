@@ -25,12 +25,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @skills = ['Ruby', 'PHP', 'Javascript', 'Angular', 'HTML', 'Python']
     @location = ['Lisbon', 'New York', 'Porto', 'Madrid', 'Berlin', 'Munich', 'Warsaw', 'Remotely']
-    @seniority = ['Junior', 'Intermediate', 'Senior']
+    @seniority = ['Junior', 'Medium', 'Senior']
     @contract_type = ['Permanent', '1 year', 'Short-term']
     @job_type = ['Full-time', 'Part-time']
     @min_salary = [1000, 1500, 2000, 3000, 4000, 5000, 6000, 7000, 10_000, 20_000, 30_000]
     @benefits = ['Dog-friendly', 'Private Healthcare', 'Yoga', 'Parking spot']
-    @position = ['Front-end', 'Back-end', 'Fullstack', 'Internship']
+    @position = ['Front-end', 'Back-end', 'Full-stack', 'Internship']
   end
 
   def update

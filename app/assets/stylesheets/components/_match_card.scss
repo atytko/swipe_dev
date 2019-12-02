@@ -1,65 +1,76 @@
 .match_background {
-background-image: linear-gradient(#e1d0e8, #e3d3ea, #ffffff);
-height: 100%;
+  background-image: linear-gradient(#e1d0e8, #e3d3ea, #ffffff);
+  height: 100%;
+  overflow-y: hidden;
 }
 
 .match_font {
   color: #CA3879;
-  font-family: ‘Muli’, sans-serif;
 }
 
 .match_result_font {
   color: black;
-  font-family: ‘Muli’, sans-serif;
 }
 
-.match_avatars {
+.match-avatar {
   height: 130px;
   width: 130px;
-  crop: fill;
   margin-right: 5px;
   margin-left: 5px;
-  border: 5px solid #AA3FD2;
+  border: 4px solid #AA3FD2;
   border-radius: 100px;
   position: relative;
   z-index: 0;
+  overflow:hidden;
 }
 
-.match_go-to-chat_button {
+.match-company {
+  height: 130px;
+  width: 130px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 4px solid #AA3FD2;
+  border-radius: 100px;
+  position: relative;
+  z-index: 0;
+  background: #ffffff;
+  overflow:hidden;
+  padding: 25px;
+}
+
+.match-company img {
+  height: 70px;
+  width: 70px;
+}
+
+.match-go-to-chat-button {
   border-radius: 20px;
-  border: 2px solid #AA3FD2;
   background-color: #AA3FD2;
-  margin-top: 100px;
-  margin-bottom: 20px;
-  height: 40px;
-  color: white;
-  font-family: ‘Muli’, sans-serif;
-}
-
-.match_back-to-swipe_button {
-  border: 2px solid #AA3FD2;
-  border-radius: 20px;
-  background-color: white;
   margin-bottom: 50px;
-  font-family: ‘Muli’, sans-serif;
   height: 40px;
   padding: 8px;
-  color: #AA3FD2;
+  color: #ffffff;
   &:hover {
+    border: 2px solid #AA3FD2;
+    background-color: white;
     text-decoration: none;
     color: #AA3FD2;
   }
 }
 
-.match_background-lines {
-  background-image: asset-url('lines.png');
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  left: 0.5rem;
-  height: 812px;
-  width: 301px;
-  z-index: 0;
+.match-back-to-swipe-button {
+  border: 2px solid #AA3FD2;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 50px;
+  height: 40px;
+  padding: 8px;
+  color: #AA3FD2;
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background: #AA3FD2;
+  }
 }
 
 .match_rocket_button {

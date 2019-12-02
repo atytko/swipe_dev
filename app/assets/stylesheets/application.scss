@@ -13,15 +13,55 @@
 @import "pages/index";
 @import "components/match_card";
 
-
+@import "animate";
 
 
 html, body {
   height: 100%;
-  overflow-x:hidden;
+  // overflow-x:hidden;
 }
 
+/* Global Pages Configurations */
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.background-lines {
+  background: url(lines.png) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  position: fixed;
+  top: 0;
+  left: 0.5rem;
+  width:20rem;
+  height: calc(100%);
+  z-index: 0;
+}
+
+#menu-toggle {
+  position: relative;
+  z-index:999;
+}
 
 .overflow-hidden {
   overflow:hidden;
 }
+
+/* Opacity Levels */
+.opacity-level-8 {
+  opacity: 0.8;
+}
+
+.opacity-level-2 {
+  opacity: 0.2;
+}
+

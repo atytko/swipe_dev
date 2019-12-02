@@ -1,26 +1,28 @@
-<h2>All Matches</h2>
 
-
-<div class="all_matches_column">
-  You matched with:
-    <% @swipes.each do |swipe| %>
-      <div class="all_matches_card">
-        <%= image_tag swipe.offer.company_photo, :class => "all_matches_img" %>
-        <div> <p><%= swipe.offer.company_name%></p></div>
-        <div><p><%= swipe.offer.location %></p></div>
+<div class="container">
+  <div class="matches-title mt-5 mb-3">
+    <h1>Your Matches</h1>
+  </div>
+  <% @swipes.each do |swipe| %>
+    <div class="matches-card">
+      <div class="col-xs-3">
+        <div class="matches-card-img">
+          <%= image_tag swipe.offer.company_photo %>
+        </div>
       </div>
-    <%end%>
+      <div class="col-9 d-block align-self-center">
+        <div class="matches-card-company col-12 text-left">
+          <%= swipe.offer.company_name%>
+        </div>
+        <div class="matches-card-location col-12 text-left">
+          <%= swipe.offer.location %>
+        </div>
+      </div>
+    </div>
+  <%end%>
   <div class="profile-link">
     <%= link_to offers_path, :class => "profile-link" do  %>
-    <%= image_tag("rockt_button.png",  :class => "rocket-button", :alt => "footer")    %>
+      <%= image_tag("rockt_button.png",  :class => "rocket-button", :alt => "footer")    %>
     <% end %>
   </div>
-
 </div>
-
-
-
-
-
-
-

@@ -1,86 +1,76 @@
 <div id="page-content-wrapper">
   <div class="container-fluid">
     <div class="row offers-block-list">
-      <div class="col-sm-12 col-md-12 col-lg-8 mx-auto d-block">
+      <div class="col-sm-12 col-md-12 col-lg-8 mx-auto d-block noselect">
         <% i=1 %>
-
         <% @new_offers.each do |offer|%>
-        <div class="card card-custom bg-white border-white border-0 swipe-card" data-id="<%= offer.id %>" style="z-index: <%= i %>; top: <%= 3*i %>px; left: <%= 3*i %>px;">
-          <div class="card-custom-background">
-            <div class="card-custom-avatar">
-<!--         <img class="img-fluid" src="./assets/img/google.png" alt="company"/>
- -->
-            <% if offer.company_photo.nil? %>
-              <p>no image</p>
-            <% else %>
-              <%= image_tag offer.company_photo %>
-            <% end %>
-              <p style="display: block" id="offer_id" class="offers"><% offer.id %></p>
-              <p style="display: none" id="swipe_id"><%= Swipe.where(offer_id: offer.id).sample.id %></p>
-
-            </div>
-            <div class="offset-2 card-body">
-              <h4 class="card-position">
-
-                <p> <%= offer.position %> Dev.</p>
-
-              </h4>
-              <div class="col-6 card-feature-item">
-                <p class="company-name-p"> <%= offer.company_name%> </p>
+          <div class="card card-custom bg-white border-white border-0 swipe-card" data-id="<%= offer.id %>" style="z-index: <%= i %>; top: <%= 0.2*i %>px; left: <%= 0.8*i %>px;">
+            <div class="card-custom-background">
+              <div class="row">
+                <div class="col-3">
+                  <div class="card-custom-avatar mt-3 ml-3 mb-3">
+                    <% unless offer.company_photo.nil? %>
+                      <%= image_tag offer.company_photo %>
+                    <% end %>
+                    <p style="display: block" id="offer_id" class="offers"><% offer.id %></p>
+                    <p style="display: none" id="swipe_id"><%= Swipe.where(offer_id: offer.id).sample.id %></p>
+                  </div>
+                </div>
+                <div class="col-9">
+                  <h4 class="card-position mt-4 ml-2 card-custom-position">
+                    <%= offer.position %> developer
+                  </h4>
+                  <div class="card-f eature-item ml-2 card-custom-company">
+                    <%= offer.company_name %>
+                  </div>
+                </div>
               </div>
-              <p class="card-company">
+            </div>
+            <div class="col pt-4 pb-4 card-feature">
+              <div class="row">
+                <div class="offset-1 col-5 card-feature-item">
+                  <p> <%= offer.min_salary %> </p>
+                  <small>Minimum salary</small>
+                </div>
+                <div class="col-6 card-feature-item">
+                  <p> <%= offer.job_type %> </p>
+                  <small>Job Type</small>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-1 col-5 mt-3 card-feature-item">
+                  <p> <%= offer.contract_type %> </p>
+                  <small>Type of Contract</small>
+                </div>
+                <div class="col-6 mt-3 card-feature-item">
+                  <p> <%= offer.location %> </p>
+                  <small>Location</small>
+                </div>
+              </div>
+            </div>
+            <div class="col pt-4">
+              <h5 class="card-title card-item-title">Description</h5>
+              <p class="card-text card-item-description">
+                <%= offer.description %>
               </p>
             </div>
-          </div>
-          <div class="col pt-2 pb-2 card-feature">
-            <div class="row">
-              <div class="col-6 card-feature-item">
-                <p> <%= offer.min_salary %>/monthly </p>
-                <small>Minimum salary</small>
-              </div>
-              <div class="col-6 card-feature-item">
-                <p> <%= offer.job_type %> </p>
-                <small>Job Type</small>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6 card-feature-item">
-                <p> <%= offer.contract_type %> </p>
-                <small>Type of Contract</small>
-              </div>
-              <div class="col-6 card-feature-item">
-                <p> <%= offer.location %> </p>
-                <small>Location</small>
-              </div>
-            </div>
-          </div>
-          <div class="col pt-2">
-            <h5 class="card-title">Description</h5>
-            <p class="card-text">
-              <p> <%= offer.description %> </p>
-            </p>
-          </div>
-          <div class="card-footer d-flex justify-content-center card-custom-background">
-            <button id="buttonReject" class="btn btn-danger btn-lg mr-5 card-custom-shadow">
-              <i class="fa fa-times fa-2x"></i>
-            </button>
-              <button id="buttonLike" class="btn btn-success btn-lg ml-5 card-custom-shadow">
-                <i class="fa fa-check-circle fa-2x"></i>
+            <div class="card-footer d-flex justify-content-center card-custom-background">
+              <button id="buttonReject" class="btn btn-lg mr-3 card-custom-shadow button-reject">
+                <i class="fa fa-times fa-2x"></i>
               </button>
+              <button id="buttonLike" class="btn ml-3 card-custom-shadow button-accept">
+                <i class="fa fa-check fa-2x"></i>
+              </button>
+            </div>
           </div>
-        </div>
-        <% i = i + 1 %>
-
+          <% i = i + 1 %>
         <% end %>
       </div>
-
-
     </div>
   </div>
-
-<div class="footer fixed-bottom">
-  <div class="footer-top d-flex justify-content-center">
-    <%= image_tag("footer.png", :class => "img-fluid", :alt => "footer") %>
+  <div class="footer fixed-bottom">
+    <div class="footer-top d-flex justify-content-center">
+      <%= image_tag("footer.png", :class => "img-fluid", :alt => "footer") %>
+    </div>
   </div>
-</div>
 </div>
