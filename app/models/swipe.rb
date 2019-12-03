@@ -6,5 +6,7 @@ class Swipe < ApplicationRecord
   scope :right, -> { where(result: true) }
   scope :left, -> { where(result: false) }
 
+  scope :offer, -> { where(offer: offer_id) }
+
   validates :offer, uniqueness: { scope: :user }
 end

@@ -5,4 +5,8 @@ class ChatRoom < ApplicationRecord
   def name
     swipe.offer.company_name
   end
+
+  def c_photo
+    swipe.offer.company_photo
+  end
 end
