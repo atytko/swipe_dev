@@ -7,9 +7,7 @@
   opacity: 0.3;
 }
 
-.form-group {
-  margin-bottom: 2.5rem;
-}
+
 
 .form-group label, .col-form-label {
   color: #000000;
@@ -93,15 +91,15 @@
 
 // Profile Text
 .profile-about{
-
+ font-family: "Raleway", "Helvetica", "sans-serif";
 }
 
 .profile-experience {
-
+ font-family: "Raleway", "Helvetica", "sans-serif";
 }
 
 .profile-education{
-
+ font-family: "Raleway", "Helvetica", "sans-serif";
 }
 
 .experience-font{
@@ -190,7 +188,6 @@
     text-decoration: none;
   }
 }
-
 
 /* Buttons */
 .edit-submit-button{
