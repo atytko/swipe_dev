@@ -54,10 +54,6 @@ label {
 }
 
 /* LinkedIn */
-html {
-  margin: 40px auto;
-  text-align: center;
-}
   .btn-linkedin {
     background: #0E76A8;
     border-radius: 1rem;
@@ -65,8 +61,12 @@ html {
     border-width: 1px;
     border-style: solid;
     border-color: #084461;
-    vertical-align: center;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
   }
+
   .btn-linkedin:link, .btn-linkedin:visited {
     color: #fff;
   }
