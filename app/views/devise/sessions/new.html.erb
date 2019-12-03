@@ -1,42 +1,60 @@
   <!--LOGIN-->
 
-    <div class="container-fluid">
-      <div class="background-lines opacity-level-2"></div>
-      <!--Logo-->
-      <div class="row mt-4 mb-3">
-        <div class="col-xs mx-auto d-block">
-          <%= image_tag("logo.png", :alt => "logo") %>
-        </div>
+  <div class="container-fluid">
+    <div class="background-lines opacity-level-2"></div>
+    <!--Logo-->
+    <div class="row mt-4 mb-3">
+      <div class="col-xs mx-auto d-block">
+        <%= image_tag("logo.png", :alt => "logo") %>
       </div>
+    </div>
 
 
-      <div class="row d-block">
-        <div class="col col-sm-8 col-md-6 col-lg-6 offset-sm-2 offset-md-3 offset-lg-3">
+    <div class="row d-block">
+      <div class="col col-sm-8 col-md-6 col-lg-6 offset-sm-2 offset-md-3 offset-lg-3">
 
-          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-inputs">
-            <%= f.input :email,
-            required: true,
-            autofocus: true,
-            input_html: { placeholder: "Email" }, :class => "form-control" %>
-            <%= f.input :password,
-            required: true,
-            input_html: { placeholder: "Password" }, :class => "form-control"%>
-            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email,
+          required: true,
+          autofocus: true,
+          input_html: { placeholder: "Email" }, :class => "form-control" %>
+          <%= f.input :password,
+          required: true,
+          input_html: { placeholder: "Password" }, :class => "form-control"%>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Login", :class => "btn btn-lg btn-block button-sign-up" %>
+        </div>
+        <% end %>
+
+
+        <div>
+          <div class="sig">
+            <div class='ico-wrapper'>
+              <svg class="ico" width="40px" height="40px" viewBox="0 0 40 40" version="1.1">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                  <g id="LinkedIn" sketch:type="MSArtboardGroup" fill="#FFFFFF">
+                    <g id="Fill-6-+-Fill-7" sketch:type="MSLayerGroup" transform="translate(6.000000, 5.000000)">
+                      <path d="M3.44222222,0 C5.34,0 6.88,1.54111111 6.88,3.44 C6.88,5.34 5.34,6.88111111 3.44222222,6.88111111 C1.53666667,6.88111111 0,5.34 0,3.44 C0,1.54111111 1.53666667,0 3.44222222,0 L3.44222222,0 Z M0.471111111,9.48888889 L6.41,9.48888889 L6.41,28.5777778 L0.471111111,28.5777778 L0.471111111,9.48888889 Z"
+                      id="Fill-6" sketch:type="MSShapeGroup"></path>
+                      <path d="M10,9.47333333 L15.6866667,9.47333333 L15.6866667,12.0833333 L15.7688889,12.0833333 C16.56,10.5822222 18.4955556,9 21.3811111,9 C27.3888889,9 28.4988889,12.9522222 28.4988889,18.0933333 L28.4988889,28.5622222 L22.5666667,28.5622222 L22.5666667,19.2788889 C22.5666667,17.0655556 22.5288889,14.2177778 19.4844444,14.2177778 C16.3966667,14.2177778 15.9255556,16.63 15.9255556,19.1211111 L15.9255556,28.5622222 L10,28.5622222 L10,9.47333333"
+                      id="Fill-7" sketch:type="MSShapeGroup"></path>
+
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            Login with LinkedIn
           </div>
-
-          <div class="form-actions">
-            <%= f.button :submit, "Login", :class => "btn btn-lg btn-block button-sign-up" %>
-          </div>
+          <%- if devise_mapping.omniauthable? != 'registrations' %>
+          <%- resource_class.omniauth_providers.each do |provider| %>
+          <%= link_to "Login with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
           <% end %>
+          <% end %>
+        </div>
 
-             <div>
-            <% if user_signed_in? %>
-            Signed in as <%= current_user.name %>. Not you?
-            <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
-            <% else %>
-            <%= link_to "Sign up", new_user_registration_path %>
-            <% end %>
-          </div>
-
-            <%= render "devise/shared/links" %>
+        <%= render "devise/shared/links" %>
