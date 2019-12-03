@@ -75,6 +75,9 @@
   color: grey;
 }
 
+.was-validated textarea.form-control:valid, textarea.form-control.is-valid{
+  border-color: purple;
+}
 
 // Profile picture along with name and email
 .profile-pic-name{
@@ -94,6 +97,10 @@
 }
 
 .profile-experience {
+
+}
+
+.profile-education{
 
 }
 

@@ -17,7 +17,11 @@
       </label>
 
       <%= f.input :first_name, class: "mt-3" %>
-      <%= f.input :last_name, class: "mt-3" %>
+      <%= f.input :last_name, class: "mt-3"  %>
+
+      <%= f.input :about %>
+      <%= f.input :experience, class: "mt-3" %>
+      <%= f.input :education, class: "mt-3" %>
 
       <%= f.input :location, as: :radio_buttons, collection: @location, wrapper: :vertical_collection_inline %>
       <%= f.input :skills, as: :radio_buttons, collection: @skills, wrapper: :vertical_collection_inline%>
