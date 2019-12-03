@@ -5,12 +5,12 @@
   </div>
   <% @swipes.each do |swipe| %>
     <div class="matches-card">
-      <div class="col-xs-3">
+      <div class="col-xs-5">
         <div class="matches-card-img">
           <%= image_tag swipe.offer.company_photo %>
         </div>
       </div>
-      <div class="col-9 d-block align-self-center">
+      <div class="col-7 d-block align-self-center">
         <div class="matches-card-company col-12 text-left">
           <%= swipe.offer.company_name%>
         </div>
@@ -18,6 +18,9 @@
           <%= swipe.offer.location %>
         </div>
       </div>
+      <div class="chat-button" >
+        <%= link_to 'Chat', chat_room_path(swipe.chat_room), class: "btn btn-primary chat-button" %>
+        </div>
     </div>
   <%end%>
   <div class="profile-link">
