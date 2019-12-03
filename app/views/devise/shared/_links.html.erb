@@ -5,12 +5,14 @@
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
   <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
 <% end %>
+<div class="col d-flex justify-content-center mt-0 mb-3">
 
  <%- if devise_mapping.omniauthable? != 'registrations' %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to omniauth_authorize_path(resource_name, provider), title: "LinkedIn", class: "btn btn btn-lg btn-block btn-linkedin" do %>
-      <i class="fab fa-linkedin-in"></i> LinkedIn
+    <%= link_to omniauth_authorize_path(resource_name, provider), title: "LinkedIn", class: "btn btn-lg btn-linkedin" do %>
+      <i class="fab fa-linkedin-in"></i> Login with LinkedIn
     <% end %>
   <% end %>
 <% end %>
+</div>
 
