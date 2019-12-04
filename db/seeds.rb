@@ -253,3 +253,4 @@ offer16 = Offer.create!(
   company_photo: "olx.jpg",
   company_name: "Olx"
 )
+ # Comment
