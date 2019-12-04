@@ -18,10 +18,10 @@
             <%= f.input :email,
             required: true,
             autofocus: true,
-            input_html: { placeholder: "Email" }, :class => "form-control" %>
+            input_html: { placeholder: "Email", style: "border: 1px solid grey;" }, :class => "form-control" %>
             <%= f.input :password,
             required: true,
-            input_html: { placeholder: "Password" }, :class => "form-control"%>
+            input_html: { placeholder: "Password", style: "border: 1px solid grey;" }, :class => "form-control"%>
             <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
 
