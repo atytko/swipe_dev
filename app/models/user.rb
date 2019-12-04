@@ -14,6 +14,7 @@ class User < ApplicationRecord
       user.email = auth["info"].email
       user.first_name = auth["info"].first_name
       user.last_name = auth["info"].last_name
+      user.remote_photo_url = auth["info"].picture_url
     end
   end
 
