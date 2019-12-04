@@ -36,9 +36,17 @@
     </div>
   </div>
 
- <div class="navbar-background footer fixed-bottom">
+    <div class="navbar-background footer fixed-bottom">
+      <% if controller_name == 'offers' && action_name == 'index' %>
+        <div class="footer-top d-flex">
+        </div>
+
+      <% else %>
         <div class="footer-top d-flex">
            <%= image_tag("footer.png", :class => "img-fluid-footer", :alt => "footer") %>
         </div>
+      <% end %>
     </div>
+
+
 </div>
