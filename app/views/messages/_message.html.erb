@@ -3,7 +3,7 @@
   <% if message.user.photo? %>
     <%= cl_image_tag message.user.photo, class: "avatar" %>
   <% else %>
-    <%= image_tag image_url("default-avatar.png"), class: "avatar" %>
+    <%= image_tag "default-avatar.png", class: "avatar" %>
   <% end %>
 
   <div class="message-content"><%= message.content %></div>
