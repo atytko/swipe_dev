@@ -33,7 +33,7 @@
 
       <%= f.input :min_salary, collection: @min_salary, prompt: :translate %>
 
-      <div class="mb-5">
+      <div class="pt-4 pb-4">
         <%= f.button :submit, "Save", class: "btn btn-primary edit-submit-button" %>
         <%= button_tag t('buttons.cancel'), class: "btn btn-outline-secondary edit-cancel-button", type: "submit", name: "cancel", value: true %>
         <%= link_to "Reset", filter_path, class: "btn btn-primary edit-reset-button float-right", :method => :patch %>
