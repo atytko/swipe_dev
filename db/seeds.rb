@@ -91,7 +91,8 @@ puts("Creating offers-------")
   )
 
   offer5 = Offer.create!(
-    recruiter: 2000,
+    recruiter: User.all.sample,
+    min_salary: 2000,
     location: 'New York',
     job_type: "Full-time",
     contract_type: "Permanent",
