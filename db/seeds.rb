@@ -32,7 +32,7 @@ user5 = User.create!(email: "k.smith@gmail.com", password: "123456", role: "cand
 puts("Creating offers-------")
   offer1 = Offer.create!(
     recruiter: User.all.sample,
-    min_salary: 4000,
+    min_salary: 2000,
     location: 'New York',
     job_type: "Full-time",
     contract_type: "Permanent",
@@ -47,12 +47,12 @@ puts("Creating offers-------")
 
   offer2 = Offer.create!(
     recruiter: User.all.sample,
-    min_salary: 4000,
+    min_salary: 2000,
     location: 'New York',
     job_type: "Full-time",
     contract_type: "Permanent",
     skills: "Ruby",
-    description: "We are currently recruiting for a talented Full-stack Developer to join our growing product development team. As part of the role you will work closely with a team of firmware & software engineers and architects to deliver a truly exciting and innovative product.",
+    description: "Join our growing product development team. As part of the role you will work closely with a team of firmware & software engineers and architects to deliver a truly exciting and innovative product.",
     position: "Full-stack",
     benefits: "Dog-friendly",
     seniority: 'Senior',
@@ -62,7 +62,7 @@ puts("Creating offers-------")
 
   offer3 = Offer.create!(
     recruiter: User.all.sample,
-    min_salary: 4000,
+    min_salary: 2000,
     location: 'London',
     job_type: "Part-time",
     contract_type: "Permanent",
@@ -91,8 +91,7 @@ puts("Creating offers-------")
   )
 
   offer5 = Offer.create!(
-    recruiter: User.all.sample,
-    min_salary: 4000,
+    recruiter: 2000,
     location: 'New York',
     job_type: "Full-time",
     contract_type: "Permanent",
@@ -107,9 +106,9 @@ puts("Creating offers-------")
 
   offer6 = Offer.create!(
     recruiter: User.all.sample,
-    min_salary: 4000,
+    min_salary: 2000,
     location: 'New York',
-    job_type: "Full-time",
+    job_type: "Part-time",
     contract_type: "Permanent",
     skills: "Ruby",
     description: "Looking for a Ruby developer to work on scalable, high-availability websites. Dogs accepted.",
@@ -122,7 +121,7 @@ puts("Creating offers-------")
 
   offer7 = Offer.create!(
     recruiter: User.all.sample,
-    min_salary: 4000,
+    min_salary: 2000,
     location: 'New York',
     job_type: "Full-time",
     contract_type: "Permanent",
@@ -137,7 +136,7 @@ puts("Creating offers-------")
 
   offer8 = Offer.create!(
     recruiter: User.all.sample,
-    min_salary: 4000,
+    min_salary: 2000,
     location: 'New York',
     job_type: "Full-time",
     contract_type: "Permanent",
