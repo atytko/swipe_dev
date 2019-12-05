@@ -13,11 +13,8 @@
 
 }
 .chat-header {
-  background-color:#c8c5c5;
-  color: white;
   font-weight:10;
   padding: 10px 20px;
-
   align-items: center;
   display:flex;
   border-top-left-radius: 10px;
@@ -25,6 +22,8 @@
   border-top: 1px solid #c6bfbf;
   border-left: 1px solid #c6bfbf;
   border-right: 1px solid #c6bfbf;
+  background: white;
+  color: #7727AD;
 }
 
 .chat-header-img {
@@ -34,7 +33,7 @@
   z-index: 0;
   overflow: hidden;
   background: #fff;
-
+  border: 1px solid #7727AD;
 }
 
 .chat-header-img img{
