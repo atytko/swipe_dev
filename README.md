@@ -21,5 +21,5 @@ https://swipe-dev.herokuapp.com/
 
 ## Test Account
 
-username: JanKowalski@gmail.com
-password: test123
+$ username: JanKowalski@gmail.com
+$ password: test123
