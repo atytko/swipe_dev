@@ -18,3 +18,8 @@ https://swipe-dev.herokuapp.com/
     $ rails db:migrate
     
     $ rails s
+
+## Test Account
+
+username: JanKowalski@gmail.com
+password: test123
