@@ -15,7 +15,7 @@ https://swipe-dev.herokuapp.com/
 
     $ bundle install
 
-    $ rails db:migrate
+    $ rails db:setup
     
     $ rails s
 
